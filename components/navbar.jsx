@@ -20,10 +20,10 @@ import { Accordion, AccordionItem } from "@nextui-org/accordion";
 import { Button } from "@nextui-org/button";
 import { link as linkStyles } from "@nextui-org/theme";
 import { Link } from "@nextui-org/link";
-import NextLink from "next/link";
+import { Image } from "@nextui-org/image";
 import clsx from "clsx";
 
-import { ChevronDown, Logo } from "@/components/icons";
+import { ChevronDown } from "@/components/icons";
 import { NAVBAR } from "@/data";
 
 export const Navbar = () => {
@@ -45,13 +45,20 @@ export const Navbar = () => {
           className="sm:hidden"
         />
         <NavbarBrand as="li" className="gap-3 max-w-fit">
-          <NextLink className="flex justify-start items-center gap-1" href="/">
-            <Logo />
-            <p className="font-bold text-inherit">KDI</p>
-          </NextLink>
+          <Link
+            className="flex justify-start items-center gap-1"
+            href={logo.link}
+          >
+            <Image
+              height={65}
+              src={logo.src}
+              alt={logo.alt}
+              className="object-contain transform transition hover:scale-105"
+            />
+          </Link>
         </NavbarBrand>
       </NavbarContent>
-      <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
+      {/* <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <ul className="hidden lg:flex gap-4 justify-start ml-2">
           {links.map(({ label, link, subcategories }) =>
             subcategories ? (
@@ -87,7 +94,7 @@ export const Navbar = () => {
                         linkStyles({ color: "foreground" }),
                         "data-[active=true]:text-primary data-[active=true]:font-medium"
                       )}
-                      as={NextLink}
+                      as={Link}
                       href={link}
                     >
                       {label}
@@ -97,7 +104,7 @@ export const Navbar = () => {
               </Dropdown>
             ) : (
               <NavbarItem key={link}>
-                <NextLink
+                <Link
                   className={clsx(
                     linkStyles({ color: "foreground" }),
                     "h-10 data-[active=true]:text-primary data-[active=true]:font-medium"
@@ -105,16 +112,85 @@ export const Navbar = () => {
                   href={link}
                 >
                   {label}
-                </NextLink>
+                </Link>
               </NavbarItem>
             )
           )}
         </ul>
-      </NavbarContent>
+      </NavbarContent> */}
 
       <NavbarContent justify="end">
+        <ul className="hidden lg:flex gap-4 justify-start ml-2">
+          {links.map(({ label, link, subcategories }) =>
+            subcategories ? (
+              <Dropdown placement="bottom-start" key={link}>
+                <NavbarItem>
+                  <DropdownTrigger>
+                    <Button
+                      disableRipple
+                      className={clsx(
+                        linkStyles({ color: "foreground" }),
+                        "data-[active=true]:text-primary data-[active=true]:font-medium"
+                      )}
+                      endContent={<ChevronDown size={16} />}
+                      radius="sm"
+                      variant="light"
+                    >
+                      {label}
+                    </Button>
+                  </DropdownTrigger>
+                </NavbarItem>
+                <DropdownMenu
+                  aria-label={`${label} features`}
+                  itemClasses={{
+                    base: "gap-4",
+                  }}
+                >
+                  {subcategories.map(({ label, logo, link }) => (
+                    <DropdownItem
+                      key={link}
+                      // description={description}
+                      className={clsx(
+                        linkStyles({ color: "foreground" }),
+                        "data-[active=true]:text-primary data-[active=true]:font-medium"
+                      )}
+                      as={Link}
+                      startContent={
+                        <Image
+                          height={25}
+                          width={50}
+                          className="object-contain"
+                          src={logo.src}
+                          alt={logo.alt}
+                        />
+                      }
+                      href={link}
+                    >
+                      {label}
+                    </DropdownItem>
+                  ))}
+                </DropdownMenu>
+              </Dropdown>
+            ) : (
+              <NavbarItem key={link}>
+                <Button
+                  disableRipple
+                  as={Link}
+                  className={clsx(
+                    linkStyles({ color: "foreground" }),
+                    "h-10 data-[active=true]:text-primary data-[active=true]:font-medium"
+                  )}
+                  variant="light"
+                  href={link}
+                >
+                  {label}
+                </Button>
+              </NavbarItem>
+            )
+          )}
+        </ul>
         <NavbarItem>
-          <Button as={Link} color="primary" href="/contact" variant="flat">
+          <Button as={Link} href="/contact" color="primary" variant="solid">
             Contact Us
           </Button>
         </NavbarItem>
@@ -125,36 +201,47 @@ export const Navbar = () => {
           {links.map(({ label, link, subcategories }) =>
             subcategories ? (
               <Accordion key={link}>
-                <AccordionItem aria-label={`${label} menu`} title={label}>
-                  <div className="flex flex-col gap-1">
-                    {subcategories.map(({ label, link }) => (
-                      <NextLink
+                <AccordionItem
+                  aria-label={`${label} menu`}
+                  title={label}
+                  classNames={{ title: "text-lg font-bold" }}
+                >
+                  <div className="flex flex-col gap-2">
+                    {subcategories.map(({ label, logo, link }) => (
+                      <Link
                         key={link}
                         className={clsx(
                           linkStyles({ color: "foreground" }),
-                          "text-sm"
+                          "text-sm flex items-center space-x-2"
                         )}
                         onClick={() => setIsMenuOpen(false)}
                         href={link}
                       >
-                        {label}
-                      </NextLink>
+                        <Image
+                          height={20}
+                          width={40}
+                          className="object-contain"
+                          src={logo.src}
+                          alt={logo.alt}
+                        />
+                        <span>{label}</span>
+                      </Link>
                     ))}
                   </div>
                 </AccordionItem>
               </Accordion>
             ) : (
               <NavbarMenuItem key={link}>
-                <NextLink
+                <Link
                   className={clsx(
                     linkStyles({ color: "foreground" }),
-                    "py-4 px-2 text-md"
+                    "py-4 px-2 text-lg font-bold"
                   )}
                   onClick={() => setIsMenuOpen(false)}
                   href={link}
                 >
                   {label}
-                </NextLink>
+                </Link>
               </NavbarMenuItem>
             )
           )}

@@ -17,9 +17,19 @@ export const BLOGS = [
           With premium materials and timeless design, the Horizon Sofa is not
           just a statement piece—it’s a symbol of enduring elegance.
         </p>
+        <p>
+          The Frigerio Horizon Sofa is the perfect blend of form and function,
+          bringing Italian craftsmanship into the modern home. Its modular
+          design allows you to customize your seating arrangement to fit your
+          space and lifestyle.
+        </p>
+        <p>
+          With premium materials and timeless design, the Horizon Sofa is not
+          just a statement piece—it’s a symbol of enduring elegance.
+        </p>
       </>
     ),
-    image: "/images/blog-1.jpg",
+    image: "/gallery/Showroom/image1.webp",
   },
   {
     slug: "blog-2",
@@ -39,9 +49,19 @@ export const BLOGS = [
           Experience the next level of kitchen innovation with Falmec, where
           cutting-edge technology meets elegant design.
         </p>
+        <p>
+          Falmec’s NRS technology is designed for those who crave a quieter
+          kitchen experience. This revolutionary noise-reduction system is not
+          just about convenience—it’s about creating a calm and peaceful
+          environment.
+        </p>
+        <p>
+          Experience the next level of kitchen innovation with Falmec, where
+          cutting-edge technology meets elegant design.
+        </p>
       </>
     ),
-    image: "/images/blog-2.jpg",
+    image: "/gallery/Showroom/image2.webp",
   },
   {
     slug: "blog-3",
@@ -61,7 +81,7 @@ export const BLOGS = [
         </p>
       </>
     ),
-    image: "/images/blog-3.jpg",
+    image: "/gallery/Showroom/image3.webp",
   },
   {
     slug: "blog-4",
@@ -79,7 +99,7 @@ export const BLOGS = [
         <p>Upgrade your spaces with the cutting-edge innovation of Barusse.</p>
       </>
     ),
-    image: "/images/blog-4.jpg",
+    image: "/gallery/Showroom/image4.webp",
   },
   {
     slug: "blog-5",
@@ -99,7 +119,7 @@ export const BLOGS = [
         </p>
       </>
     ),
-    image: "/images/blog-5.jpg",
+    image: "/gallery/Showroom/image5.webp",
   },
   {
     slug: "blog-6",
@@ -118,7 +138,7 @@ export const BLOGS = [
         </p>
       </>
     ),
-    image: "/images/blog-6.jpg",
+    image: "/gallery/Showroom/image6.webp",
   },
   {
     slug: "blog-7",
@@ -138,7 +158,7 @@ export const BLOGS = [
         </p>
       </>
     ),
-    image: "/images/blog-7.jpg",
+    image: "/gallery/Showroom/image7.webp",
   },
   {
     slug: "blog-8",
@@ -155,7 +175,7 @@ export const BLOGS = [
         <p>Let Falmec bring sophistication and practicality to your home.</p>
       </>
     ),
-    image: "/images/blog-8.jpg",
+    image: "/gallery/Showroom/image8.webp",
   },
   {
     slug: "blog-9",
@@ -175,7 +195,7 @@ export const BLOGS = [
         </p>
       </>
     ),
-    image: "/images/blog-5.jpg",
+    image: "/gallery/Showroom/image9.webp",
   },
   {
     slug: "blog-10",
@@ -194,7 +214,7 @@ export const BLOGS = [
         </p>
       </>
     ),
-    image: "/images/blog-6.jpg",
+    image: "/gallery/Showroom/image10.webp",
   },
   {
     slug: "blog-11",
@@ -214,7 +234,7 @@ export const BLOGS = [
         </p>
       </>
     ),
-    image: "/images/blog-7.jpg",
+    image: "/gallery/Showroom/image11.webp",
   },
   {
     slug: "blog-12",
@@ -229,9 +249,15 @@ export const BLOGS = [
           these appliances redefine modern kitchens.
         </p>
         <p>Let Falmec bring sophistication and practicality to your home.</p>
+        <p>
+          Discover how Falmec transforms kitchens with its elegant yet
+          functional range hoods. With sleek designs and powerful performance,
+          these appliances redefine modern kitchens.
+        </p>
+        <p>Let Falmec bring sophistication and practicality to your home.</p>
       </>
     ),
-    image: "/images/blog-8.jpg",
+    image: "/gallery/Showroom/image12.webp",
   },
   {
     slug: "blog-13",
@@ -249,9 +275,17 @@ export const BLOGS = [
           From timeless classics to bold modern designs, discover how Italian
           craftsmanship can elevate your living spaces.
         </p>
+        <p>
+          Explore Modernbrands’ curated selection of Italian luxury furniture,
+          offering pieces that define sophistication and comfort.
+        </p>
+        <p>
+          From timeless classics to bold modern designs, discover how Italian
+          craftsmanship can elevate your living spaces.
+        </p>
       </>
     ),
-    image: "/images/blog-5.jpg",
+    image: "/gallery/Showroom/image13.webp",
   },
   {
     slug: "blog-14",
@@ -268,9 +302,17 @@ export const BLOGS = [
           Transform your cooking experience with ILVE’s Italian-inspired
           solutions.
         </p>
+        <p>
+          ILVE’s new built-in series takes kitchen design to the next level,
+          combining efficiency, aesthetics, and advanced features.
+        </p>
+        <p>
+          Transform your cooking experience with ILVE’s Italian-inspired
+          solutions.
+        </p>
       </>
     ),
-    image: "/images/blog-6.jpg",
+    image: "/gallery/Showroom/image14.webp",
   },
   {
     slug: "blog-15",
@@ -288,9 +330,17 @@ export const BLOGS = [
         <p>
           Dive into the world of Alf DaFre for a home that feels uniquely yours.
         </p>
+        <p>
+          Alf DaFre’s personalized approach ensures your home design aligns with
+          your lifestyle. With versatile furniture pieces and creative layouts,
+          balance and functionality become effortless.
+        </p>
+        <p>
+          Dive into the world of Alf DaFre for a home that feels uniquely yours.
+        </p>
       </>
     ),
-    image: "/images/blog-7.jpg",
+    image: "/gallery/Showroom/image15.webp",
   },
   {
     slug: "blog-16",
@@ -305,8 +355,14 @@ export const BLOGS = [
           these appliances redefine modern kitchens.
         </p>
         <p>Let Falmec bring sophistication and practicality to your home.</p>
+        <p>
+          Discover how Falmec transforms kitchens with its elegant yet
+          functional range hoods. With sleek designs and powerful performance,
+          these appliances redefine modern kitchens.
+        </p>
+        <p>Let Falmec bring sophistication and practicality to your home.</p>
       </>
     ),
-    image: "/images/blog-8.jpg",
+    image: "/gallery/Showroom/image16.webp",
   },
 ];

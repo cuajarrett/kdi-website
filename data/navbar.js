@@ -1,19 +1,18 @@
 import { BRANDS } from "./brands";
-import { FOOTER } from "./footer";
 
 export const NAVBAR = {
   logo: {
-    src: "/images/logo.png",
-    alt: FOOTER.companyName,
+    src: "/logos/KDI Official Logo Files_KDI Official Logo.png",
+    alt: "Kassi Distributors Inc. Logo Mark",
     link: "/",
   },
   links: [
     {
       label: "Brands",
       link: "/brands",
-      subcategories: BRANDS.map(({ slug, name, description }) => ({
+      subcategories: BRANDS.map(({ slug, name, logo }) => ({
         label: name,
-        description,
+        logo,
         link: `/brands/${slug}`,
       })),
     },

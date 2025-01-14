@@ -1,24 +1,38 @@
+import { BRANDS } from "./brands";
+
 export const FOOTER = {
   companyName: "Kassi Distributors Inc.",
+  logo: {
+    src: "/logos/KDI Official Logo Files_KDI Official Logo.png",
+    alt: "Kassi Distributions Inc. Logo with Text",
+  },
   quickLinks: [
-    {
-      label: "Brands",
-      link: "/brands",
-    },
+    // {
+    //   label: "Brands",
+    //   link: "/brands",
+    // },
     {
       label: "Showroom",
       link: "/showroom",
     },
     { label: "Blogs", link: "/blogs" },
     { label: "About Us", link: "/about" },
+    { label: "Contact Us", link: "/contact" },
   ],
   showroomAddresses: [
-    { name: "Showroom 1", address: "123 Main Street, City, Country" },
-    { name: "Showroom 2", address: "123 Main Street, City, Country" },
+    {
+      name: "Main Showroom",
+      address:
+        "7646 Guijo Street, San Antonio Village, Makati, 1203 Metro Manila",
+      googleMaps: "https://maps.app.goo.gl/K8Rh1ZnP5xt6CnR6A",
+      openingHours: "Monday to Saturday (9:00am to 6:00pm)",
+      phones: ["+63 2 8807 5238", "+63 966 806 8999"],
+    },
   ],
   contactInformation: {
-    email: "contact@company.com",
-    phone: "+1 234 567 890",
+    email: "info@kassidinc.com",
+    telephone: "+63 2 8807 5238",
+    phone: "+63 966 806 8999",
   },
   socialLinks: [
     {

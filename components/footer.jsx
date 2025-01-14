@@ -1,11 +1,14 @@
 "use client";
 
 import { Link } from "@nextui-org/link";
-import { FOOTER } from "@/data"; // Import the footer data from your data file
+import { Image } from "@nextui-org/image";
+
+import { FOOTER, HOME } from "@/data"; // Import the footer data from your data file
 
 export const Footer = () => {
   const {
     companyName,
+    logo,
     quickLinks,
     showroomAddresses,
     contactInformation,
@@ -17,11 +20,13 @@ export const Footer = () => {
       <div className="container mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {/* Column 1: Company Info */}
         <div>
-          <h4 className="font-bold text-lg mb-4">{companyName}</h4>
-          <p>
-            A trusted distributor of premium products, bringing quality
-            solutions to customers worldwide.
-          </p>
+          <Image
+            height={65}
+            src={logo.src}
+            alt={logo.alt}
+            className="object-contain"
+          />
+          <p>{HOME.heroSection.heading}</p>
         </div>
 
         {/* Column 2: Quick Links  */}
@@ -30,12 +35,7 @@ export const Footer = () => {
           <ul className="mb-6">
             {quickLinks.map(({ label, link }, index) => (
               <li key={index} className="mb-2">
-                <Link
-                  href={link}
-                  className="text-gray-600 hover:text-gray-900 transition-colors"
-                >
-                  {label}
-                </Link>
+                <Link href={link}>{label}</Link>
               </li>
             ))}
           </ul>
@@ -44,10 +44,12 @@ export const Footer = () => {
         <div>
           <h4 className="font-bold text-lg mb-4">Showroom Locations</h4>
           <ul>
-            {showroomAddresses.map(({ name, address }, index) => (
+            {showroomAddresses.map(({ name, address, googleMaps }, index) => (
               <li key={index} className="mb-2">
                 <p className="font-semibold">{name}</p>
-                <p className="text-gray-600">{address}</p>
+                <Link href={googleMaps} isExternal>
+                  {address}
+                </Link>
               </li>
             ))}
           </ul>
@@ -58,15 +60,21 @@ export const Footer = () => {
           <h4 className="font-bold text-lg mb-4">Contact Us</h4>
           <p className="mb-2">
             <strong>Email:</strong>{" "}
-            <Link
-              href={`mailto:${contactInformation.email}`}
-              className="text-gray-600 hover:text-gray-900 transition-colors"
-            >
+            <Link href={`mailto:${contactInformation.email}`}>
               {contactInformation.email}
             </Link>
           </p>
+          <p className="mb-2">
+            <strong>Telephone:</strong>{" "}
+            <Link href={`tel:${FOOTER.contactInformation.telephone}`}>
+              {FOOTER.contactInformation.telephone}
+            </Link>
+          </p>
           <p className="mb-6">
-            <strong>Phone:</strong> {contactInformation.phone}
+            <strong>Phone:</strong>{" "}
+            <Link href={`tel:${FOOTER.contactInformation.phone}`}>
+              {FOOTER.contactInformation.phone}
+            </Link>
           </p>
           <h4 className="font-bold text-lg mb-4">Follow Us</h4>
           <div className="flex space-x-4">

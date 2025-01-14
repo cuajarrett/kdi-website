@@ -1,47 +1,40 @@
 export const ABOUT = {
-  heroSection: {
-    title: "In Pursuit of Tasteful Living",
-    highlights: [
-      {
-        title: "Offers Curated Interior Design Expertise",
-        description:
-          "We have a full team of Interior Design Consultants that can provide in-depth and creative consultation to create a tasteful mix of furnishings fit for your personal space.",
-        image: "/images/about/interior-design.jpg", // Replace with actual image path
-      },
-      {
-        title: "Create Dream Home with Ease and Convenience",
-        description:
-          "We have the design expertise and full access to supply and materials. No need to look further, you only need to talk to one partner, Modernbrands.",
-        image: "/images/about/dream-home.jpg", // Replace with actual image path
-      },
-      {
-        title: "One-Stop-Shop Home Solutions",
-        description:
-          "We supply Italian Kitchen Cabinets, Wardrobes and Closets, Furniture, Doors, Floorings, and artistic wall and floor finishing.",
-        image: "/images/about/one-stop-shop.jpg", // Replace with actual image path
-      },
-      {
-        title: "Offers Premium Home Products with Best Value",
-        description:
-          "Premium Italian and European furniture and materials for a complete modern home and can, at the same time, provide these quality products at the best value.",
-        image: "/images/about/premium-home-products.jpg", // Replace with actual image path
-      },
-    ],
-  },
+  historySection: [
+    {
+      description:
+        "Kassi Distributors Inc. (KDI) traces its beginnings to the 1970s, when its parent company—Fozzini Lifestyle Concepts Inc.—started as a modest woodworking workshop in Binondo, Manila. ",
+      image: "/gallery/About/History 1_Traces.webp",
+    },
+    {
+      description:
+        "Over the decades, that small enterprise evolved into a respected furniture and modular cabinetry manufacturer, earning its reputation for quality craftsmanship and continuous innovation.",
+      image: "/gallery/About/History 2_Evolution.webp",
+    },
+    {
+      description:
+        "In 2024, KDI was formed as an independent subsidiary with a singular mission: Bridging Global Excellence with Local Aspirations. Entrusted with distributing world-class brands such as Nolte Küchen and Express Küchen, KDI remains committed to upholding its legacy of excellence while embracing fresh possibilities in the local design landscape.",
+      image: "/gallery/About/History 3_Current.webp",
+    },
+  ],
   aboutSection: {
     title: "About Us",
-    description: `
-      Modernbrands, Inc. is a home solutions company in pursuit of tasteful living for the everyday Filipino,
-      offering a wide selection of products to furnish your living space.
-
-      Modernbrands' curated collections and design expertise all under one roof helps you achieve the pinnacle of tasteful living.
-      We provide solutions to help you create your dream home with ease and convenience through our wide range of home improvement solutions.
-
-      Our Interior Design Team, trained in the design of Italian kitchens, wardrobes, and closets, is ready to
-      provide professional services and advice to our customers.
-
-      From designing and creating Italian kitchen cabinets, wardrobes, closets, door solutions, and flooring,
-      to loose furniture that is best in their category, our clients can talk to just one partner.`,
+    description: (
+      <>
+        <p>
+          At Kassi Distributors Inc., our company is driven by both a respect
+          for tradition and a forward-looking vision for Filipino homes. By
+          curating the finest international brands across a wide spectrum of
+          price points, we ensure that everyone can Live in Style and Comfort,
+          whether their preference leans toward premium luxury or more
+          approachable elegance.
+        </p>
+        <p>
+          Our operation combines innovation, attentive service, and decades of
+          manufacturing expertise to create interiors where practicality meets
+          refined design.
+        </p>
+      </>
+    ),
   },
   missionVisionSection: {
     mission: {
