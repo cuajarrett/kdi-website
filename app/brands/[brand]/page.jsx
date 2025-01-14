@@ -19,12 +19,19 @@ export default function BrandItemPage({ params }) {
 
   if (!brandData) {
     return (
-      <div className="text-center py-12">
-        <h1 className="text-2xl font-bold">Brand Not Found</h1>
-        <p>Sorry, the brand you are looking for does not exist.</p>
-        <Button as={Link} href="/brands" color="primary" variant="flat">
-          Back to Brands
-        </Button>
+      <div className="flex flex-col items-center justify-center min-h-[40vh] px-4">
+        <div className="max-w-md text-center bg-white p-8 shadow-lg rounded-lg">
+          <h1 className="text-3xl font-bold text-gray-800 mb-4">
+            Brand Not Found
+          </h1>
+          <p className="text-gray-600 mb-6">
+            Oops! The brand you're looking for doesn't exist or might have been
+            removed. Don't worry, there's more to explore!
+          </p>
+          <Button className="w-full" color="primary" as={Link} href="/brands">
+            Back to Brands
+          </Button>
+        </div>
       </div>
     );
   }

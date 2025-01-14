@@ -257,7 +257,7 @@ export const BLOGS = [
         <p>Let Falmec bring sophistication and practicality to your home.</p>
       </>
     ),
-    image: "/gallery/Showroom/image12.webp",
+    image: "/gallery/Showroom/image13.webp",
   },
   {
     slug: "blog-13",
@@ -285,7 +285,7 @@ export const BLOGS = [
         </p>
       </>
     ),
-    image: "/gallery/Showroom/image13.webp",
+    image: "/gallery/Showroom/image14.webp",
   },
   {
     slug: "blog-14",
@@ -312,7 +312,7 @@ export const BLOGS = [
         </p>
       </>
     ),
-    image: "/gallery/Showroom/image14.webp",
+    image: "/gallery/Showroom/image15.webp",
   },
   {
     slug: "blog-15",
@@ -340,7 +340,7 @@ export const BLOGS = [
         </p>
       </>
     ),
-    image: "/gallery/Showroom/image15.webp",
+    image: "/gallery/Showroom/image16.webp",
   },
   {
     slug: "blog-16",
@@ -363,6 +363,6 @@ export const BLOGS = [
         <p>Let Falmec bring sophistication and practicality to your home.</p>
       </>
     ),
-    image: "/gallery/Showroom/image16.webp",
+    image: "/gallery/Showroom/image17.webp",
   },
 ];
