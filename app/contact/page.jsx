@@ -101,9 +101,13 @@ export default function ContactPage() {
             return null;
           }}
         >
-          <SelectItem value="kitchens">Kitchens</SelectItem>
-          <SelectItem value="living">Living Spaces</SelectItem>
-          <SelectItem value="bedrooms">Bedrooms</SelectItem>
+          <SelectItem value="request-for-catalog">
+            Request for Catalogue
+          </SelectItem>
+          <SelectItem value="living">Furniture</SelectItem>
+          <SelectItem value="book-an-appointment">
+            Book an Appointment
+          </SelectItem>
         </Select>
         <Select
           name="showroom"
@@ -117,8 +121,7 @@ export default function ContactPage() {
             return null;
           }}
         >
-          <SelectItem value="scavolini">Scavolini</SelectItem>
-          <SelectItem value="valcucine">Valcucine</SelectItem>
+          <SelectItem value="main">Main Showroom</SelectItem>
         </Select>
         <Textarea
           name="message"
