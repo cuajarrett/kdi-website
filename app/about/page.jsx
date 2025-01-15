@@ -69,7 +69,7 @@ export default function AboutPage() {
 
       {/* Mission and Vision Section */}
       <section>
-        <h2 className="text-3xl font-semibold text-center mb-12">
+        <h2 className="text-3xl font-semibold text-center mb-12 sm:text-4xl lg:text-5xl">
           Mission & Vision
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
