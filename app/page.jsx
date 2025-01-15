@@ -72,12 +72,16 @@ export default function HomePage() {
       </section>
 
       {/* Brands Section */}
-      <section className="py-12 bg-gray-50">
+      <section className="py-12">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold text-center mb-8">Brands</h2>
           <div className="flex justify-center items-center flex-wrap gap-4">
             {brandSection.map(({ name, logo, href }) => (
-              <Link key={name} href={href}>
+              <Link
+                key={name}
+                href={href}
+                className="transition transform hover:scale-105"
+              >
                 <Image
                   src={logo.src}
                   alt={logo.alt}

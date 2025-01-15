@@ -13,11 +13,32 @@ import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 
 export const metadata = {
-  title: {
-    default: "Kassi Distributors Inc.",
-    template: "%s - Kassi Distributors Inc.",
+  title: "Kassi Distributors Inc.",
+  description:
+    "Discover how Kassi Distributors Inc. bridges global excellence with local aspirations, curating the finest international brands for Filipino homes. From premium luxury to approachable elegance, we create practical yet refined living spaces with innovation, attentive service, and decades of expertise.",
+  openGraph: {
+    title: "Kassi Distributors Inc.",
+    description:
+      "Discover how Kassi Distributors Inc. bridges global excellence with local aspirations, curating the finest international brands for Filipino homes. From premium luxury to approachable elegance, we create practical yet refined living spaces with innovation, attentive service, and decades of expertise.",
+    images: [
+      {
+        url: `${process.env.DOMAIN_URL}/gallery/Home/Hero_HomePage1_Desktop.webp`,
+        alt: "Kassi Distributors Inc. Showroom",
+      },
+    ],
   },
-  description: "[Short Description of Company]",
+  twitter: {
+    card: "summary_large_image",
+    title: "Kassi Distributors Inc.",
+    description:
+      "Discover how Kassi Distributors Inc. bridges global excellence with local aspirations, curating the finest international brands for Filipino homes. From premium luxury to approachable elegance, we create practical yet refined living spaces with innovation, attentive service, and decades of expertise.",
+    images: [
+      {
+        url: `${process.env.DOMAIN_URL}/gallery/Home/Hero_HomePage1_Desktop.webp`,
+        alt: "Kassi Distributors Inc. Showroom",
+      },
+    ],
+  },
   icons: {
     icon: "/favicon.ico",
   },

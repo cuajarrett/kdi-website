@@ -16,17 +16,16 @@ export const Footer = () => {
   } = FOOTER;
 
   return (
-    <footer className="bg-gray-100 py-10 px-5">
-      <div className="container mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <footer className="bg-gray-100">
+      <div className="container mx-auto max-w-7xl py-6 px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {/* Column 1: Company Info */}
         <div>
           <Image
-            height={65}
+            height={75}
             src={logo.src}
             alt={logo.alt}
             className="object-contain"
           />
-          <p>{HOME.heroSection.heading}</p>
         </div>
 
         {/* Column 2: Quick Links  */}
@@ -93,7 +92,7 @@ export const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t mt-10 pt-5 text-center">
+      <div className="border-t py-5 text-center">
         <p className="text-sm text-gray-600">
           &copy; {new Date().getFullYear()} {companyName} All rights reserved.
         </p>

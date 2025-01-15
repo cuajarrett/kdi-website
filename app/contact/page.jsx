@@ -9,8 +9,11 @@ import { Select, SelectItem } from "@nextui-org/select";
 import { Form } from "@nextui-org/form";
 
 import { sendContactEmail } from "@/utils/contact";
+import { CONTACT } from "@/data";
 
 export default function ContactPage() {
+  const { heading, subheading, subjects, showrooms } = CONTACT;
+
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(null);
 
@@ -38,11 +41,8 @@ export default function ContactPage() {
 
   return (
     <>
-      <h1 className={title()}>Contact Us</h1>
-      <p className="mb-10 text-gray-600">
-        We are looking forward to starting a project with you! Send us a message
-        and we’ll respond as soon as possible.
-      </p>
+      <h1 className={title()}>{heading}</h1>
+      <p className="mb-10 text-gray-600">{subheading}</p>
       <Form
         onSubmit={handleSubmit}
         validationBehavior="native" // Use native validation for fields
@@ -101,13 +101,9 @@ export default function ContactPage() {
             return null;
           }}
         >
-          <SelectItem value="request-for-catalog">
-            Request for Catalogue
-          </SelectItem>
-          <SelectItem value="living">Furniture</SelectItem>
-          <SelectItem value="book-an-appointment">
-            Book an Appointment
-          </SelectItem>
+          {subjects.map((subject) => (
+            <SelectItem key={subject}>{subject}</SelectItem>
+          ))}
         </Select>
         <Select
           name="showroom"
@@ -121,7 +117,9 @@ export default function ContactPage() {
             return null;
           }}
         >
-          <SelectItem value="main">Main Showroom</SelectItem>
+          {showrooms.map((showroom) => (
+            <SelectItem key={showroom}>{showroom}</SelectItem>
+          ))}
         </Select>
         <Textarea
           name="message"

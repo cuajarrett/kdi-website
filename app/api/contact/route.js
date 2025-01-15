@@ -3,8 +3,6 @@ import nodemailer from "nodemailer";
 export async function POST(req) {
   const body = await req.json();
 
-  console.log(body);
-
   const { name, email, phone, projectAddress, inquiry, showroom, message } =
     body;
 
@@ -50,18 +48,31 @@ export async function POST(req) {
   try {
     // Send email
     await transporter.sendMail({
-      from: process.env.EMAIL_USER, // Use your email as the sender
-      to: "your-email@example.com", // Replace with your destination email
-      subject: "New Contact Form Submission",
+      from: process.env.EMAIL_USER,
+      to: process.env.EMAIL_USER, // Send email to the support team
+      replyTo: email, // Customer's email for direct reply
+      subject: `New Inquiry: ${inquiry} - ${showroom} - From ${name}`,
       html: `
-        <h1>New Contact Form Submission</h1>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Phone:</strong> ${phone || "N/A"}</p>
-        <p><strong>Project Address:</strong> ${projectAddress || "N/A"}</p>
-        <p><strong>Inquiry About:</strong> ${inquiry}</p>
-        <p><strong>Showroom:</strong> ${showroom}</p>
-        <p><strong>Message:</strong> ${message}</p>
+        <h1>New Inquiry from Potential Client</h1>
+        <p><strong>Client Details:</strong></p>
+        <ul>
+          <li><strong>Name:</strong> ${name}</li>
+          <li><strong>Email:</strong> ${email}</li>
+          <li><strong>Phone:</strong> ${phone || "N/A"}</li>
+        </ul>
+        <p><strong>Project Details:</strong></p>
+        <ul>
+          <li><strong>Project Address:</strong> ${projectAddress || "N/A"}</li>
+          <li><strong>Inquiry About:</strong> ${inquiry}</li>
+          <li><strong>Showroom:</strong> ${showroom}</li>
+        </ul>
+        <p><strong>Message:</strong></p>
+        <p>${message}</p>
+        <hr />
+        <p>
+          <em>This email was automatically generated from the contact form on your
+          website. Please follow up with the client as soon as possible.</em>
+        </p>
       `,
     });
 
