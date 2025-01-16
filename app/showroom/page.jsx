@@ -1,21 +1,11 @@
-"use client";
-
-import { Image } from "@nextui-org/image";
 import { Link } from "@nextui-org/link";
 
 import { title } from "@/components/primitives";
 import { SHOWROOM } from "@/data";
-import { useRouter } from "next/navigation";
+import Gallery from "@/components/gallery";
 
 export default function ShowroomPage() {
   const { showroomAddresses, gallery } = SHOWROOM;
-
-  const router = useRouter();
-
-  const handleImageClick = (imageSrc) => {
-    // Redirect to the contact page with query parameters
-    router.push(`/contact?interestedIn=${encodeURIComponent(imageSrc)}`);
-  };
 
   return (
     <>
@@ -67,32 +57,7 @@ export default function ShowroomPage() {
       {/* Gallery Section */}
       <div className="mt-8 space-y-4">
         <h2 className={title()}>Showroom Gallery</h2>
-        <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {gallery.map((image, index) => (
-            <div
-              key={index}
-              className="relative group cursor-pointer rounded-xl overflow-hidden"
-              onClick={() => handleImageClick(image)}
-            >
-              {/* Image */}
-              <Image
-                key={index}
-                src={image}
-                alt={`Showroom Image ${index + 1}`}
-                height={200}
-                width={400}
-                isZoomed
-              />
-
-              {/* Hover Overlay */}
-              <div className="z-10 absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <span className="text-white text-lg font-bold">
-                  Are you interested?
-                </span>
-              </div>
-            </div>
-          ))}
-        </div>
+        <Gallery gallery={gallery} />
       </div>
     </>
   );

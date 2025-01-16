@@ -214,7 +214,7 @@ export const Navbar = () => {
                           linkStyles({ color: "foreground" }),
                           "text-sm flex items-center space-x-2"
                         )}
-                        onClick={() => setIsMenuOpen(false)}
+                        onPress={() => setIsMenuOpen(false)}
                         href={link}
                       >
                         <Image
@@ -237,7 +237,7 @@ export const Navbar = () => {
                     linkStyles({ color: "foreground" }),
                     "py-4 px-2 text-lg font-bold"
                   )}
-                  onClick={() => setIsMenuOpen(false)}
+                  onPress={() => setIsMenuOpen(false)}
                   href={link}
                 >
                   {label}

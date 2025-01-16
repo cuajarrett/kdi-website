@@ -23,9 +23,7 @@ export default function AboutPage() {
       {/* History Section */}
       <section class="py-12 sm:py-16 lg:py-20 xl:py-24">
         <div class="text-center space-y-4">
-          <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
-            History
-          </h2>
+          <h2 className={title()}>History</h2>
           <p class="mx-auto max-w-2xl text-lg font-normal text-gray-700 lg:text-xl lg:leading-8">
             How it all started
           </p>
@@ -68,11 +66,9 @@ export default function AboutPage() {
       </section>
 
       {/* Mission and Vision Section */}
-      <section>
-        <h2 className="text-3xl font-semibold text-center mb-12 sm:text-4xl lg:text-5xl">
-          Mission & Vision
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <section className="text-center">
+        <h2 className={title()}>Mission & Vision</h2>
+        <div className="text-left grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Mission */}
           <div className="bg-white shadow-md p-6 rounded-lg transition hover:shadow-2xl">
             <h3 className="text-2xl font-bold mb-4">
