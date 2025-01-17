@@ -6,6 +6,7 @@ import "swiper/css/navigation";
 import "@/styles/globals.css";
 import clsx from "clsx";
 
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Providers } from "./providers";
 
 import { fontSans } from "@/config/fonts";
@@ -15,11 +16,12 @@ import { Footer } from "@/components/footer";
 export const metadata = {
   title: "Kassi Distributors Inc.",
   description:
-    "Discover how Kassi Distributors Inc. bridges global excellence with local aspirations, curating the finest international brands for Filipino homes. From premium luxury to approachable elegance, we create practical yet refined living spaces with innovation, attentive service, and decades of expertise.",
+    "Discover how Kassi Distributors Inc. bridges global excellence with local aspirations, curating the finest international brands for Filipino homes.",
   openGraph: {
     title: "Kassi Distributors Inc.",
+    type: "website",
     description:
-      "Discover how Kassi Distributors Inc. bridges global excellence with local aspirations, curating the finest international brands for Filipino homes. From premium luxury to approachable elegance, we create practical yet refined living spaces with innovation, attentive service, and decades of expertise.",
+      "Discover how Kassi Distributors Inc. bridges global excellence with local aspirations, curating the finest international brands for Filipino homes.",
     images: [
       {
         url: `${process.env.DOMAIN_URL}/gallery/Home/Hero_HomePage1_Desktop.webp`,
@@ -31,7 +33,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Kassi Distributors Inc.",
     description:
-      "Discover how Kassi Distributors Inc. bridges global excellence with local aspirations, curating the finest international brands for Filipino homes. From premium luxury to approachable elegance, we create practical yet refined living spaces with innovation, attentive service, and decades of expertise.",
+      "Discover how Kassi Distributors Inc. bridges global excellence with local aspirations, curating the finest international brands for Filipino homes.",
     images: [
       {
         url: `${process.env.DOMAIN_URL}/gallery/Home/Hero_HomePage1_Desktop.webp`,
@@ -66,6 +68,7 @@ export default function RootLayout({ children }) {
             <Navbar />
             <main className="container mx-auto max-w-7xl py-8 px-6 flex-grow">
               {children}
+              <SpeedInsights />
             </main>
             <Footer />
           </div>
