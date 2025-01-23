@@ -4,19 +4,19 @@ export const ABOUT = {
       year: "1970s",
       description:
         "Kassi Distributors Inc. (KDI) traces its beginnings to the 1970s, when its parent company—Fozzini Lifestyle Concepts Inc.—started as a modest woodworking workshop in Binondo, Manila. ",
-      image: "/gallery/About/History 1_Traces.webp",
+      image: "/gallery/About/History/History 1_Traces.webp",
     },
     {
       year: "2000s",
       description:
         "Over the decades, that small enterprise evolved into a respected furniture and modular cabinetry manufacturer, earning its reputation for quality craftsmanship and continuous innovation.",
-      image: "/gallery/About/History 2_Evolution.webp",
+      image: "/gallery/About/History/History 2_Evolution.webp",
     },
     {
       year: "2024",
       description:
         "In 2024, KDI was formed as an independent subsidiary with a singular mission: Bridging Global Excellence with Local Aspirations. Entrusted with distributing world-class brands such as Nolte Küchen and Express Küchen, KDI remains committed to upholding its legacy of excellence while embracing fresh possibilities in the local design landscape.",
-      image: "/gallery/About/History 3_Current.webp",
+      image: "/gallery/About/History/History 3_Current.webp",
     },
   ],
   aboutSection: {

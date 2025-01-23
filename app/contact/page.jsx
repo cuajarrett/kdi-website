@@ -77,6 +77,7 @@ export default function ContactPage() {
           name="phone"
           label="Phone Number"
           placeholder="Enter your phone number"
+          isRequired
           validate={(value) => {
             if (value && !/^\d{10,15}$/.test(value)) {
               return "Phone number must be 10-15 digits long";

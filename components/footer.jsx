@@ -83,6 +83,7 @@ export const Footer = () => {
                 href={link}
                 aria-label={alt}
                 className="text-gray-600 hover:text-gray-900 transition-colors"
+                isExternal
               >
                 {icon}
               </Link>

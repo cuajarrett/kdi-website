@@ -6,6 +6,7 @@ import { Image } from "@nextui-org/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
 
+import { Card } from "@/components/card";
 import { HOME, FOOTER } from "@/data";
 
 export default function HomePage() {
@@ -75,21 +76,15 @@ export default function HomePage() {
       <section className="py-12">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold text-center mb-8">Brands</h2>
-          <div className="flex justify-center items-center flex-wrap gap-4">
-            {brandSection.map(({ name, logo, href }) => (
-              <Link
-                key={name}
-                href={href}
-                className="transition transform hover:scale-105"
-              >
-                <Image
-                  src={logo.src}
-                  alt={logo.alt}
-                  width={150}
-                  height={100}
-                  className="object-contain"
-                />
-              </Link>
+          <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {brandSection.map(({ name, logo, href, description }, index) => (
+              <Card
+                key={index}
+                link={href}
+                image={logo.src}
+                title={name}
+                excerpt={description}
+              />
             ))}
           </div>
           {brandSection.length > 10 ? (
@@ -139,17 +134,17 @@ export default function HomePage() {
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold text-center mb-8">Blogs</h2>
           <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {blogSection.blogs.slice(0, 3).map((blog) => (
-              <Link
-                key={blog.slug}
-                href={`/blogs/${blog.slug}`}
-                className="border rounded-lg p-4 shadow flex flex-col transition hover:shadow-xl"
-              >
-                <Image src={blog.image} alt={blog.title} />
-                <h2 className="text-xl font-bold mt-4">{blog.title}</h2>
-                <p className="text-gray-700 mt-2">{blog.excerpt}</p>
-              </Link>
-            ))}
+            {blogSection.blogs
+              .slice(0, 3)
+              .map(({ slug, image, title, excerpt }, index) => (
+                <Card
+                  key={index}
+                  link={`/blogs/${slug}`}
+                  image={image}
+                  title={title}
+                  excerpt={excerpt}
+                />
+              ))}
           </div>
           {blogSection.blogs.length > 3 ? (
             <div className="text-center mt-8">

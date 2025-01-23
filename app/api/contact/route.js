@@ -14,7 +14,7 @@ export async function POST(req) {
   if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
     errors.email = "Enter a valid email address.";
   }
-  if (phone && !/^\d{10,15}$/.test(phone)) {
+  if (!phone || (phone && !/^\d{10,15}$/.test(phone))) {
     errors.phone = "Phone number must be 10-15 digits long.";
   }
   if (!inquiry) {

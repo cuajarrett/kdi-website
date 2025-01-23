@@ -56,15 +56,16 @@ export const HOME = {
       },
     ],
   },
-  brandSection: BRANDS.map(({ slug, name, logo }) => ({
+  brandSection: BRANDS.map(({ slug, name, logo, description }) => ({
     name: name,
     logo,
+    description,
     href: `/brands/${slug}`,
   })),
   aboutSection: {
     title: "About Us",
     description: ABOUT.aboutSection.description,
-    image: ABOUT.historySection[0].image,
+    image: "/gallery/Home/About.webp",
     alt: "About Kassi Distributors Inc.",
     cta: "Learn More",
     link: "/about",
@@ -78,7 +79,7 @@ export const HOME = {
   contactSection: {
     title: "Contact Us",
     description: CONTACT.subheading,
-    image: ABOUT.historySection[1].image,
+    image: "/gallery/Home/Contact.webp",
     alt: "Contact Kassi Distributors Inc.",
     cta: "Contact",
     link: "/contact",
