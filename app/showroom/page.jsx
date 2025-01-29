@@ -1,8 +1,42 @@
 import { Link } from "@nextui-org/link";
 
-import { subtitle, title } from "@/components/primitives";
+import { title } from "@/components/primitives";
 import { SHOWROOM } from "@/data";
 import Gallery from "@/components/gallery";
+
+export async function generateMetadata() {
+  return {
+    title: "Our Showrooms | Kassi Distributors Inc.",
+    description:
+      "Explore Kassi Distributors Inc.'s premium showrooms. Visit our locations, view our elegant interiors, and find the perfect home solutions tailored for you.",
+    openGraph: {
+      title: "Our Showrooms | Kassi Distributors Inc.",
+      description:
+        "Explore Kassi Distributors Inc.'s premium showrooms. Visit our locations, view our elegant interiors, and find the perfect home solutions tailored for you.",
+      url: "https://kassidinc.com/showroom",
+      siteName: "Kassi Distributors Inc.",
+      images: [
+        {
+          url: "/gallery/Showroom/image1.webp", // Update to the best image for SEO
+          width: 1200,
+          height: 630,
+          alt: "Kassi Distributors Inc. Showroom",
+        },
+      ],
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Our Showrooms | Kassi Distributors Inc.",
+      description:
+        "Explore Kassi Distributors Inc.'s premium showrooms. Visit our locations, view our elegant interiors, and find the perfect home solutions tailored for you.",
+      images: ["/gallery/Showroom/image1.webp"],
+    },
+    alternates: {
+      canonical: "https://kassidinc.com/showroom",
+    },
+  };
+}
 
 export default function ShowroomPage() {
   const { writeUp, showroomAddresses, gallery } = SHOWROOM;

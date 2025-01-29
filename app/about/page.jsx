@@ -1,9 +1,41 @@
-"use client";
-
 import { Image } from "@nextui-org/image";
 
 import { title } from "@/components/primitives";
 import { ABOUT } from "@/data";
+
+export async function generateMetadata() {
+  return {
+    title: "About Us | Kassi Distributors Inc.",
+    description:
+      "Discover Kassi Distributors Inc.—bridging global excellence with local aspirations. Learn about our history, mission, and commitment to design innovation.",
+    openGraph: {
+      title: "About Us | Kassi Distributors Inc.",
+      description:
+        "Discover Kassi Distributors Inc.—bridging global excellence with local aspirations. Learn about our history, mission, and commitment to design innovation.",
+      url: "https://kassidinc.com/about",
+      siteName: "Kassi Distributors Inc.",
+      images: [
+        {
+          url: "/gallery/About/History 3_Current.webp",
+          width: 1200,
+          height: 630,
+          alt: "Kassi Distributors Inc. About Us",
+        },
+      ],
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "About Us | Kassi Distributors Inc.",
+      description:
+        "Discover Kassi Distributors Inc.—bridging global excellence with local aspirations. Learn about our history, mission, and commitment to design innovation.",
+      images: ["/gallery/About/History 3_Current.webp"],
+    },
+    alternates: {
+      canonical: "https://kassidinc.com/about",
+    },
+  };
+}
 
 export default function AboutPage() {
   const {
@@ -62,7 +94,10 @@ export default function AboutPage() {
         </div>
         <ul className="mx-auto mt-8 grid max-w-md grid-cols-1 gap-10 lg:max-w-7xl lg:grid-cols-3">
           {historySection.map(({ description, image, year }, index) => (
-            <li className="flex-start group relative flex items-start lg:items-center lg:flex-col">
+            <li
+              key={index}
+              className="flex-start group relative flex items-start lg:items-center lg:flex-col"
+            >
               {index < historySection.length - 1 && (
                 <span
                   className="absolute left-[18px] top-14 h-[calc(100%_-_32px)] w-px bg-gray-300 lg:right-0 lg:left-2/3 lg:top-[18px] lg:h-px lg:w-[calc(100%_-_72px)]"

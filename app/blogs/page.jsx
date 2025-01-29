@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { Link } from "@nextui-org/link";
 import { Pagination } from "@nextui-org/pagination";
-import { Image } from "@nextui-org/image";
 
 import { title } from "@/components/primitives";
 import { BLOGS } from "@/data/blogs";

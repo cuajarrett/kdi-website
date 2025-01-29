@@ -66,7 +66,7 @@ export default async function BlogDetailPage({ params }) {
 
   return (
     <>
-      <article className="container mx-auto px-4 py-12">
+      <article className="container mx-auto px-4 pb-12">
         <h1 className={title()}>{blog.title}</h1>
         <p className="text-sm text-gray-500 mb-4">
           {new Date(blog.publishedAt).toDateString()}
