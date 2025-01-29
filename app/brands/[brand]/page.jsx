@@ -54,7 +54,9 @@ export default async function BrandItemPage({ params }) {
           />
           <div className="flex flex-col text-center sm:text-left">
             <h3 className="text-3xl font-bold">{name}</h3>
-            <p className="text-lg text-gray-700 mb-4">{description}</p>
+            <p className="text-sm text-gray-700 mb-4 text-justify sm:text-lg">
+              {description}
+            </p>
             <div className="flex flex-col gap-2 sm:flex-row">
               <Button
                 as={Link}
@@ -79,7 +81,7 @@ export default async function BrandItemPage({ params }) {
       ) : (
         <section className="flex flex-col justify-center items-center my-auto">
           <Image className="" src={logo.src} alt={logo.alt} layout="fill" />
-          <p className="text-lg text-gray-700 mb-4">{description}</p>
+          <p className="text-sm text-gray-700 mb-4 sm:text-lg">{description}</p>
         </section>
       )}
 

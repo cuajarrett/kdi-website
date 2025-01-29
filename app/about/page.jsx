@@ -1,22 +1,54 @@
 "use client";
 
 import { Image } from "@nextui-org/image";
-import { Accordion, AccordionItem } from "@nextui-org/accordion";
-import { Button } from "@nextui-org/button";
 
 import { title } from "@/components/primitives";
 import { ABOUT } from "@/data";
 
 export default function AboutPage() {
-  const { historySection, aboutSection, missionVisionSection } = ABOUT;
+  const {
+    servicesSection,
+    historySection,
+    aboutSection,
+    missionVisionSection,
+  } = ABOUT;
 
   return (
     <>
       {/* About Section */}
-      <section className="text-center space-y-6">
+      <section className="text-center space-y-6 py-12 sm:py-16 lg:py-20 xl:py-24">
         <h1 className={title()}>{aboutSection.title}</h1>
-        <div className="text-lg space-y-4 text-gray-600">
+        <div className="text-base text-justify space-y-4 text-gray-600 sm:text-center">
           {aboutSection.description}
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="text-center space-y-6 py-12 sm:py-16 lg:py-20 xl:py-24">
+        {/* Section Title */}
+        <h2 className={title()}>{servicesSection.title}</h2>
+
+        {/* Services Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {servicesSection.services.map((service, index) => (
+            <div
+              key={index}
+              className="flex flex-col items-center text-center space-y-4"
+            >
+              {/* Image */}
+              <div className="w-full h-64 overflow-hidden">
+                <Image src={service.image} alt={service.title} />
+              </div>
+
+              {/* Title */}
+              <h3 className="text-lg font-semibold">{service.title}</h3>
+
+              {/* Description */}
+              <p className="text-base text-gray-600 text-justify">
+                {service.description}
+              </p>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -37,25 +69,11 @@ export default function AboutPage() {
                   aria-hidden="true"
                 ></span>
               )}
-              <div className="inline-flex p-2 shrink-0 items-center justify-center rounded-xl border border-gray-300 bg-gray-50 transition-all duration-200 group-hover:text-white group-hover:border-gray-900 group-hover:bg-gray-900">
+              <div className="inline-flex p-2 shrink-0 items-center justify-center border border-gray-300 bg-gray-50 transition-all duration-200 group-hover:text-white group-hover:border-gray-900 group-hover:bg-gray-900">
                 {year}
-                {/* <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5 text-gray-600 group-hover:text-white"
-                  >
-                    <path
-                      d="M21 12C21 13.6569 16.9706 15 12 15C7.02944 15 3 13.6569 3 12M21 5C21 6.65685 16.9706 8 12 8C7.02944 8 3 6.65685 3 5M21 5C21 3.34315 16.9706 2 12 2C7.02944 2 3 3.34315 3 5M21 5V19C21 20.6569 16.9706 22 12 22C7.02944 22 3 20.6569 3 19V5"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    ></path>
-                  </svg> */}
               </div>
               <div className="ml-6 lg:ml-0 lg:mt-10">
-                <Image src={image} />
+                <Image src={image} alt={`${year} image`} />
                 <h4 className="mt-2 text-base text-gray-700 text-justify">
                   {description}
                 </h4>
@@ -70,21 +88,21 @@ export default function AboutPage() {
         <h2 className={title()}>Mission & Vision</h2>
         <div className="text-left grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Mission */}
-          <div className="bg-white shadow-md p-6 rounded-lg transition hover:shadow-2xl">
+          <div className="bg-white shadow-md p-6 transition hover:shadow-2xl">
             <h3 className="text-2xl font-bold mb-4">
               {missionVisionSection.mission.title}
             </h3>
-            <p className="text-gray-700 whitespace-pre-wrap">
+            <p className="text-base text-gray-700 whitespace-pre-wrap">
               {missionVisionSection.mission.description}
             </p>
           </div>
 
           {/* Vision */}
-          <div className="bg-white shadow-md p-6 rounded-lg transition hover:shadow-2xl">
+          <div className="bg-white shadow-md p-6 transition hover:shadow-2xl">
             <h3 className="text-2xl font-bold mb-4">
               {missionVisionSection.vision.title}
             </h3>
-            <p className="text-gray-700 whitespace-pre-wrap">
+            <p className="text-base text-gray-700 whitespace-pre-wrap">
               {missionVisionSection.vision.description}
             </p>
           </div>

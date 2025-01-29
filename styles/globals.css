@@ -27,3 +27,16 @@
   background: #f2f2f2;
   opacity: 1;
 }
+
+/* Global Reset for Border Radius */
+img,
+button,
+input,
+textarea,
+a,
+.card,
+.select,
+.alert,
+.badge {
+  border-radius: 0 !important;
+}

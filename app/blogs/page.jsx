@@ -7,6 +7,8 @@ import { Image } from "@nextui-org/image";
 
 import { title } from "@/components/primitives";
 import { BLOGS } from "@/data/blogs";
+import { Card } from "@/components/card";
+import { Button } from "@nextui-org/button";
 
 export default function BlogsPage() {
   const [currPage, setCurrPage] = useState(1);
@@ -29,30 +31,45 @@ export default function BlogsPage() {
   return (
     <>
       <h1 className={title()}>Blogs</h1>
-      <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {paginatedBlogs.map((blog) => (
-          <Link
-            key={blog.slug}
-            href={`/blogs/${blog.slug}`}
-            className="border rounded-lg p-4 shadow flex flex-col transition hover:shadow-xl"
-          >
-            <Image src={blog.image} alt={blog.title} />
-            <h2 className="text-xl font-bold mt-4">{blog.title}</h2>
-            <p className="text-gray-700 mt-2">{blog.excerpt}</p>
-          </Link>
-        ))}
-      </div>
+      {BLOGS.length > 0 ? (
+        <>
+          <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {paginatedBlogs.map(({ slug, image, title, excerpt }, index) => (
+              <Card
+                key={index}
+                link={`/blogs/${slug}`}
+                image={image}
+                title={title}
+                excerpt={excerpt}
+              />
+            ))}
+          </div>
 
-      {/* NextUI Pagination */}
-      <div className="flex justify-center items-center my-8">
-        <Pagination
-          total={totalPages}
-          initialPage={1}
-          onChange={handlePageChange}
-          size="lg"
-          color="primary"
-        />
-      </div>
+          {/* NextUI Pagination */}
+          <div className="flex justify-center items-center my-8">
+            <Pagination
+              total={totalPages}
+              initialPage={1}
+              onChange={handlePageChange}
+              size="lg"
+              color="primary"
+            />
+          </div>
+        </>
+      ) : (
+        <div className="flex flex-col items-center justify-center min-h-[40vh] px-4">
+          <div className="max-w-md text-center bg-white p-8 shadow-lg rounded-lg">
+            <p className="text-gray-600 mb-6">
+              There are currently no available blogs at the moment. Please check
+              back soon for updates, insights, and inspirations. Stay tuned for
+              exciting content coming your way! 🚀
+            </p>
+            <Button color="primary" className="w-full" as={Link} href="/">
+              Back to Home
+            </Button>
+          </div>
+        </div>
+      )}
     </>
   );
 }

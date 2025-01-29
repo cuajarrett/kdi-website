@@ -32,25 +32,31 @@ export const Footer = () => {
         <div>
           <h4 className="font-bold text-lg mb-4">Quick Links</h4>
           <ul className="mb-6">
-            {quickLinks.map(({ label, link }, index) => (
-              <li key={index} className="mb-2">
-                <Link href={link}>{label}</Link>
-              </li>
-            ))}
+            {quickLinks.map(
+              ({ label, link }, index) =>
+                label && (
+                  <li key={index} className="mb-2">
+                    <Link href={link}>{label}</Link>
+                  </li>
+                )
+            )}
           </ul>
         </div>
         {/* Column 3: Showrooms */}
         <div>
           <h4 className="font-bold text-lg mb-4">Showroom Locations</h4>
           <ul>
-            {showroomAddresses.map(({ name, address, googleMaps }, index) => (
-              <li key={index} className="mb-2">
-                <p className="font-semibold">{name}</p>
-                <Link href={googleMaps} isExternal>
-                  {address}
-                </Link>
-              </li>
-            ))}
+            {showroomAddresses.map(
+              ({ name, openingHours, address, googleMaps }, index) => (
+                <li key={index} className="mb-2">
+                  <p className="font-semibold">{name}</p>
+                  <p className="font-light text-sm">{openingHours}</p>
+                  <Link href={googleMaps} isExternal>
+                    {address}
+                  </Link>
+                </li>
+              )
+            )}
           </ul>
         </div>
 

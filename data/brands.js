@@ -17,20 +17,20 @@ export const BRANDS = [
     catalogue: "/catalogues/NK31168_Kuechen_Journal_2024_GB.pdf",
     gallery: [
       {
-        src: "/gallery/Showroom/image3.webp",
-        caption: "Classic living room setup.",
+        src: "/gallery/Brands/Nolte/WIDE0035-HDR.webp",
+        caption: "Nolte Kitchen Setup 1",
       },
       {
-        src: "/gallery/Showroom/image4.webp",
-        caption: "Luxury dining area.",
+        src: "/gallery/Brands/Nolte/WIDE9775-HDR.webp",
+        caption: "Nolte Kitchen Setup 2",
       },
       {
-        src: "/gallery/Showroom/image5.webp",
-        caption: "Classic living room setup.",
+        src: "/gallery/Brands/Nolte/WIDE9885-HDR.webp",
+        caption: "Nolte Kitchen Setup 3",
       },
       {
-        src: "/gallery/Showroom/image6.webp",
-        caption: "Luxury dining area.",
+        src: "/gallery/Brands/Nolte/WIDE9945-HDR.webp",
+        caption: "Nolte Kitchen Setup 4",
       },
     ],
   },
@@ -53,10 +53,13 @@ export const BRANDS = [
     catalogue: "/catalogues/EK29460.pdf",
     gallery: [
       {
-        src: "/gallery/Showroom/image1.webp",
-        caption: "Modern kitchen design.",
+        src: "/gallery/Brands/Express/WIDE9820-HDR.webp",
+        caption: "Express Kitchen 1",
       },
-      { src: "/gallery/Showroom/image2.webp", caption: "Elegant cabinets." },
+      {
+        src: "/gallery/Brands/Express/WIDE9860-HDR.webp",
+        caption: "Express Kitchen 2",
+      },
     ],
   },
   {

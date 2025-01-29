@@ -16,7 +16,7 @@ export default function Gallery({ gallery }) {
       {gallery.map(({ src, caption }, index) => (
         <div
           key={index}
-          className="relative group cursor-pointer rounded-xl overflow-hidden"
+          className="relative group cursor-pointer overflow-hidden"
           onClick={() => handleImageClick()}
         >
           {/* Image */}

@@ -50,7 +50,7 @@ export const Navbar = () => {
             href={logo.link}
           >
             <Image
-              height={65}
+              height={150}
               src={logo.src}
               alt={logo.alt}
               className="object-contain transform transition hover:scale-105"
@@ -58,139 +58,86 @@ export const Navbar = () => {
           </Link>
         </NavbarBrand>
       </NavbarContent>
-      {/* <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
-        <ul className="hidden lg:flex gap-4 justify-start ml-2">
-          {links.map(({ label, link, subcategories }) =>
-            subcategories ? (
-              <Dropdown key={link}>
-                <NavbarItem>
-                  <DropdownTrigger>
-                    <Button
-                      disableRipple
-                      className={clsx(
-                        linkStyles({ color: "foreground" }),
-                        "data-[active=true]:text-primary data-[active=true]:font-medium"
-                      )}
-                      endContent={<ChevronDown size={16} />}
-                      radius="sm"
-                      variant="light"
-                    >
-                      {label}
-                    </Button>
-                  </DropdownTrigger>
-                </NavbarItem>
-                <DropdownMenu
-                  aria-label={`${label} features`}
-                  className="w-[340px]"
-                  itemClasses={{
-                    base: "gap-4",
-                  }}
-                >
-                  {subcategories.map(({ label, description, link }) => (
-                    <DropdownItem
-                      key={link}
-                      description={description}
-                      className={clsx(
-                        linkStyles({ color: "foreground" }),
-                        "data-[active=true]:text-primary data-[active=true]:font-medium"
-                      )}
-                      as={Link}
-                      href={link}
-                    >
-                      {label}
-                    </DropdownItem>
-                  ))}
-                </DropdownMenu>
-              </Dropdown>
-            ) : (
-              <NavbarItem key={link}>
-                <Link
-                  className={clsx(
-                    linkStyles({ color: "foreground" }),
-                    "h-10 data-[active=true]:text-primary data-[active=true]:font-medium"
-                  )}
-                  href={link}
-                >
-                  {label}
-                </Link>
-              </NavbarItem>
-            )
-          )}
-        </ul>
-      </NavbarContent> */}
-
       <NavbarContent justify="end">
         <ul className="hidden lg:flex gap-4 justify-start ml-2">
-          {links.map(({ label, link, subcategories }) =>
-            subcategories ? (
-              <Dropdown placement="bottom-start" key={link}>
-                <NavbarItem>
-                  <DropdownTrigger>
-                    <Button
-                      disableRipple
-                      className={clsx(
-                        linkStyles({ color: "foreground" }),
-                        "data-[active=true]:text-primary data-[active=true]:font-medium"
-                      )}
-                      endContent={<ChevronDown size={16} />}
-                      radius="sm"
-                      variant="light"
-                    >
-                      {label}
-                    </Button>
-                  </DropdownTrigger>
+          {links.map(
+            ({ label, link, subcategories }) =>
+              label &&
+              (subcategories ? (
+                <Dropdown placement="bottom-start" key={link}>
+                  <NavbarItem>
+                    <DropdownTrigger>
+                      <Button
+                        disableRipple
+                        className={clsx(
+                          linkStyles({ color: "foreground" }),
+                          "data-[active=true]:text-primary data-[active=true]:font-medium"
+                        )}
+                        endContent={<ChevronDown size={16} />}
+                        radius="sm"
+                        variant="light"
+                      >
+                        {label}
+                      </Button>
+                    </DropdownTrigger>
+                  </NavbarItem>
+                  <DropdownMenu
+                    aria-label={`${label} features`}
+                    itemClasses={{
+                      base: "gap-4",
+                    }}
+                  >
+                    {subcategories.map(({ label, logo, link }) => (
+                      <DropdownItem
+                        key={link}
+                        // description={description}
+                        className={clsx(
+                          linkStyles({ color: "foreground" }),
+                          "data-[active=true]:text-primary data-[active=true]:font-medium"
+                        )}
+                        as={Link}
+                        startContent={
+                          <Image
+                            height={25}
+                            width={50}
+                            className="object-contain"
+                            src={logo.src}
+                            alt={logo.alt}
+                          />
+                        }
+                        href={link}
+                      >
+                        {label}
+                      </DropdownItem>
+                    ))}
+                  </DropdownMenu>
+                </Dropdown>
+              ) : (
+                <NavbarItem key={link}>
+                  <Button
+                    disableRipple
+                    as={Link}
+                    className={clsx(
+                      linkStyles({ color: "foreground" }),
+                      "rounded-none h-10 data-[active=true]:text-primary data-[active=true]:font-medium"
+                    )}
+                    variant="light"
+                    href={link}
+                  >
+                    {label}
+                  </Button>
                 </NavbarItem>
-                <DropdownMenu
-                  aria-label={`${label} features`}
-                  itemClasses={{
-                    base: "gap-4",
-                  }}
-                >
-                  {subcategories.map(({ label, logo, link }) => (
-                    <DropdownItem
-                      key={link}
-                      // description={description}
-                      className={clsx(
-                        linkStyles({ color: "foreground" }),
-                        "data-[active=true]:text-primary data-[active=true]:font-medium"
-                      )}
-                      as={Link}
-                      startContent={
-                        <Image
-                          height={25}
-                          width={50}
-                          className="object-contain"
-                          src={logo.src}
-                          alt={logo.alt}
-                        />
-                      }
-                      href={link}
-                    >
-                      {label}
-                    </DropdownItem>
-                  ))}
-                </DropdownMenu>
-              </Dropdown>
-            ) : (
-              <NavbarItem key={link}>
-                <Button
-                  disableRipple
-                  as={Link}
-                  className={clsx(
-                    linkStyles({ color: "foreground" }),
-                    "h-10 data-[active=true]:text-primary data-[active=true]:font-medium"
-                  )}
-                  variant="light"
-                  href={link}
-                >
-                  {label}
-                </Button>
-              </NavbarItem>
-            )
+              ))
           )}
         </ul>
         <NavbarItem>
-          <Button as={Link} href="/contact" color="primary" variant="solid">
+          <Button
+            as={Link}
+            href="/contact"
+            color="primary"
+            variant="solid"
+            className="rounded-none "
+          >
             Contact Us
           </Button>
         </NavbarItem>
@@ -198,52 +145,54 @@ export const Navbar = () => {
 
       <NavbarMenu>
         <div className="mx-4 mt-2 flex flex-col gap-2">
-          {links.map(({ label, link, subcategories }) =>
-            subcategories ? (
-              <Accordion key={link}>
-                <AccordionItem
-                  aria-label={`${label} menu`}
-                  title={label}
-                  classNames={{ title: "text-lg font-bold" }}
-                >
-                  <div className="flex flex-col gap-2">
-                    {subcategories.map(({ label, logo, link }) => (
-                      <Link
-                        key={link}
-                        className={clsx(
-                          linkStyles({ color: "foreground" }),
-                          "text-sm flex items-center space-x-2"
-                        )}
-                        onPress={() => setIsMenuOpen(false)}
-                        href={link}
-                      >
-                        <Image
-                          height={20}
-                          width={40}
-                          className="object-contain"
-                          src={logo.src}
-                          alt={logo.alt}
-                        />
-                        <span>{label}</span>
-                      </Link>
-                    ))}
-                  </div>
-                </AccordionItem>
-              </Accordion>
-            ) : (
-              <NavbarMenuItem key={link}>
-                <Link
-                  className={clsx(
-                    linkStyles({ color: "foreground" }),
-                    "py-4 px-2 text-lg font-bold"
-                  )}
-                  onPress={() => setIsMenuOpen(false)}
-                  href={link}
-                >
-                  {label}
-                </Link>
-              </NavbarMenuItem>
-            )
+          {links.map(
+            ({ label, link, subcategories }) =>
+              label &&
+              (subcategories ? (
+                <Accordion key={link}>
+                  <AccordionItem
+                    aria-label={`${label} menu`}
+                    title={label}
+                    classNames={{ title: "text-lg font-bold" }}
+                  >
+                    <div className="flex flex-col gap-4">
+                      {subcategories.map(({ label, logo, link }) => (
+                        <Link
+                          key={link}
+                          className={clsx(
+                            linkStyles({ color: "foreground" }),
+                            "text-sm flex items-center space-x-2"
+                          )}
+                          onPress={() => setIsMenuOpen(false)}
+                          href={link}
+                        >
+                          <Image
+                            height={20}
+                            width={40}
+                            className="object-contain"
+                            src={logo.src}
+                            alt={logo.alt}
+                          />
+                          <span>{label}</span>
+                        </Link>
+                      ))}
+                    </div>
+                  </AccordionItem>
+                </Accordion>
+              ) : (
+                <NavbarMenuItem key={link}>
+                  <Link
+                    className={clsx(
+                      linkStyles({ color: "foreground" }),
+                      "py-4 px-2 text-lg font-bold"
+                    )}
+                    onPress={() => setIsMenuOpen(false)}
+                    href={link}
+                  >
+                    {label}
+                  </Link>
+                </NavbarMenuItem>
+              ))
           )}
         </div>
       </NavbarMenu>

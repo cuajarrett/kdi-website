@@ -1,7 +1,9 @@
+import { Link } from "@nextui-org/link";
 import { ABOUT } from "./about";
 import { BLOGS } from "./blogs";
 import { BRANDS } from "./brands";
 import { CONTACT } from "./contact";
+import { FOOTER } from "./footer";
 
 export const HOME = {
   heroSection: {
@@ -55,6 +57,23 @@ export const HOME = {
         alt: "Kassi Distributors Inc. Gallery 6",
       },
     ],
+    callToAction: (
+      // <>
+      //   Call us at{" "}
+      //   <Link href={`tel:${FOOTER.contactInformation.telephone}`}>
+      //     {FOOTER.contactInformation.telephone}
+      //   </Link>{" "}
+      //   or{" "}
+      //   <Link href={`tel:${FOOTER.contactInformation.phone}`}>
+      //     {FOOTER.contactInformation.phone}
+      //   </Link>{" "}
+      //   to start planning your dream home today!
+      // </>
+      <>
+        Visit us at our <Link href="/showroom">Showroom</Link> to start planning
+        your dream home today!
+      </>
+    ),
   },
   brandSection: BRANDS.map(({ slug, name, logo, description }) => ({
     name: name,

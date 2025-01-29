@@ -7,7 +7,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
 
 import { Card } from "@/components/card";
-import { HOME, FOOTER } from "@/data";
+import { HOME } from "@/data";
+import { title, subtitle } from "@/components/primitives";
 
 export default function HomePage() {
   const {
@@ -30,7 +31,7 @@ export default function HomePage() {
           pagination={{ clickable: true }}
           navigation
           loop
-          className="w-full h-[70vh] sm:h-[75vh]"
+          className="w-full md:h-[50vh] lg:h-[75vh]"
         >
           {heroSection.images.map((image, index) => (
             <SwiperSlide key={index}>
@@ -38,11 +39,14 @@ export default function HomePage() {
                 <Image
                   src={image.desktopSrc}
                   alt={image.alt}
-                  srcSet={`
-                    ${image.mobileSrc} 640w,
-                    ${image.desktopSrc} 1280w
-                  `}
                   loading="eager"
+                  className="hidden md:block"
+                />
+                <Image
+                  src={image.mobileSrc}
+                  alt={image.alt}
+                  loading="eager"
+                  className="block md:hidden"
                 />
               </div>
             </SwiperSlide>
@@ -54,20 +58,14 @@ export default function HomePage() {
       <section className="py-12 bg-white text-center">
         <div className="container mx-auto space-y-4">
           <div>
-            <h2 className="text-3xl font-bold">{heroSection.heading}</h2>
-            <p className="text-gray-700 mb-6">{heroSection.subheading}</p>
+            <h2 className={title()}>{heroSection.heading}</h2>
+            <p className={subtitle()}>{heroSection.subheading}</p>
           </div>
-          <div className="space-y-2">{heroSection.introduction}</div>
-          <p className="font-semibold">
-            Call us at{" "}
-            <Link href={`tel:${FOOTER.contactInformation.telephone}`}>
-              {FOOTER.contactInformation.telephone}
-            </Link>{" "}
-            or{" "}
-            <Link href={`tel:${FOOTER.contactInformation.phone}`}>
-              {FOOTER.contactInformation.phone}
-            </Link>{" "}
-            to start planning your dream home today!
+          <div className="space-y-2 text-sm text-justify sm:text-md sm:text-center">
+            {heroSection.introduction}
+          </div>
+          <p className="font-semibold text-sm text-justify sm:text-md sm:text-center">
+            {heroSection.callToAction}
           </p>
         </div>
       </section>
@@ -75,7 +73,7 @@ export default function HomePage() {
       {/* Brands Section */}
       <section className="py-12">
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-8">Brands</h2>
+          <h2 className="text-3xl font-bold text-center mb-8">Our Partners</h2>
           <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {brandSection.map(({ name, logo, href, description }, index) => (
               <Card
@@ -87,7 +85,7 @@ export default function HomePage() {
               />
             ))}
           </div>
-          {brandSection.length > 10 ? (
+          {brandSection.length > 3 ? (
             <div className="text-center mt-8">
               <Button
                 as={Link}
@@ -107,9 +105,11 @@ export default function HomePage() {
 
       {/* About Us Section */}
       <section className="py-12 flex justify-center gap-4 items-center flex-col-reverse bg-white text-center md:flex-row">
-        <div className="container mx-auto">
+        <div className="container mx-auto flex flex-col items-center justify-center">
           <h2 className="text-3xl font-bold mb-4">{aboutSection.title}</h2>
-          <div className="space-y-2">{aboutSection.description}</div>
+          <div className="space-y-2 max-w-xl text-sm text-justify sm:text-md">
+            {aboutSection.description}
+          </div>
           <Button
             as={Link}
             className="mt-6"
@@ -121,60 +121,58 @@ export default function HomePage() {
             {aboutSection.cta}
           </Button>
         </div>
-        <Image
-          isZoomed
-          src={aboutSection.image}
-          alt={aboutSection.alt}
-          width={600}
-        />
+        <Image src={aboutSection.image} alt={aboutSection.alt} width={600} />
       </section>
 
       {/* Blogs Section */}
-      <section className="py-12 bg-gray-50">
-        <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-8">Blogs</h2>
-          <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {blogSection.blogs
-              .slice(0, 3)
-              .map(({ slug, image, title, excerpt }, index) => (
-                <Card
-                  key={index}
-                  link={`/blogs/${slug}`}
-                  image={image}
-                  title={title}
-                  excerpt={excerpt}
-                />
-              ))}
-          </div>
-          {blogSection.blogs.length > 3 ? (
-            <div className="text-center mt-8">
-              <Button
-                as={Link}
-                href={blogSection.link}
-                color="primary"
-                variant="solid"
-                size="lg"
-              >
-                {blogSection.cta}
-              </Button>
+      {blogSection.blogs.length > 0 && (
+        <section className="py-12 bg-gray-50">
+          <div className="container mx-auto">
+            <h2 className="text-3xl font-bold text-center mb-8">Blogs</h2>
+            <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {blogSection.blogs
+                .slice(0, 3)
+                .map(({ slug, image, title, excerpt }, index) => (
+                  <Card
+                    key={index}
+                    link={`/blogs/${slug}`}
+                    image={image}
+                    title={title}
+                    excerpt={excerpt}
+                  />
+                ))}
             </div>
-          ) : (
-            <></>
-          )}
-        </div>
-      </section>
+            {blogSection.blogs.length > 3 ? (
+              <div className="text-center mt-8">
+                <Button
+                  as={Link}
+                  href={blogSection.link}
+                  color="primary"
+                  variant="solid"
+                  size="lg"
+                >
+                  {blogSection.cta}
+                </Button>
+              </div>
+            ) : (
+              <></>
+            )}
+          </div>
+        </section>
+      )}
 
       {/* Contact Us Section */}
       <section className="py-12 flex justify-center gap-4 items-center flex-col bg-white text-center md:flex-row">
         <Image
-          isZoomed
           src={contactSection.image}
           alt={contactSection.alt}
           width={600}
         />
-        <div className="container mx-auto">
+        <div className="container mx-auto flex flex-col justify-center items-center">
           <h2 className="text-3xl font-bold mb-4">{contactSection.title}</h2>
-          <div className="space-y-2">{contactSection.description}</div>
+          <div className="space-y-2 max-w-xl text-sm sm:text-md">
+            {contactSection.description}
+          </div>
           <Button
             className="mt-6"
             as={Link}
