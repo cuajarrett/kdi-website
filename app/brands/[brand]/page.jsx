@@ -13,6 +13,25 @@ export async function generateStaticParams() {
   }));
 }
 
+export async function generateMetadata({ params }) {
+  const { brand } = await params;
+  const brandData = BRANDS.find((b) => b.slug === brand);
+  if (!brandData) return notFound();
+
+  return {
+    title: `${brandData.name} | Explore ${brandData.name} Products & Designs`,
+    description: brandData.description,
+    openGraph: {
+      title: `${brandData.name}`,
+      description: brandData.description,
+      url: `https://kassidinc.com/brands/${brandData.slug}`,
+      siteName: "Kassi Distributors Inc.",
+      images: [brandData.logo.src],
+      type: "website",
+    },
+  };
+}
+
 // Page Component
 export default async function BrandItemPage({ params }) {
   const { brand } = await params;

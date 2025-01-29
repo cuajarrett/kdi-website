@@ -1,6 +1,7 @@
 export const BLOGS = [
   {
     slug: "blog-1",
+    publishedAt: "2024-12-20T16:00:00Z",
     title:
       "Frigerio Horizon Sofa: Italian Craftsmanship with Modular Flexibility",
     excerpt:
@@ -33,6 +34,7 @@ export const BLOGS = [
   },
   {
     slug: "blog-2",
+    publishedAt: "2024-12-27T16:00:00Z",
     title:
       "Silence in the Kitchen: Falmec’s Revolutionary NRS Technology for Noise-Free Range Hoods",
     excerpt:
@@ -65,6 +67,7 @@ export const BLOGS = [
   },
   {
     slug: "blog-3",
+    publishedAt: "2024-12-30T16:00:00Z",
     title: "Designing Your Dream Kitchen with Novacucina",
     excerpt:
       "Creating a kitchen where form meets function. With Italian craftsmanship and sleek modern design, Novacucina makes it easy to design a kitchen that looks stunning while being practical.",
@@ -85,6 +88,7 @@ export const BLOGS = [
   },
   {
     slug: "blog-4",
+    publishedAt: "2025-01-02T16:00:00Z",
     title:
       "Exploring Barusse’s Innovative Tip & Top Systems: Merging Design, Functionality, and Fluidity in Modern Interiors",
     excerpt:
@@ -103,6 +107,7 @@ export const BLOGS = [
   },
   {
     slug: "blog-5",
+    publishedAt: "2025-01-04T16:00:00Z",
     title:
       "Transforming Homes: Modernbrands Boasts the Best of Italian Luxury Furniture",
     excerpt:
@@ -123,6 +128,7 @@ export const BLOGS = [
   },
   {
     slug: "blog-6",
+    publishedAt: "2025-01-06T16:00:00Z",
     title: "Transform Your Kitchen with ILVE’s New Built-In Series",
     excerpt:
       "For over 50 years, ILVE has been a leader in crafting premium kitchen appliances that seamlessly blend tradition with innovative technology. Discover their new built-in series for a sleek and functional kitchen.",
@@ -142,6 +148,7 @@ export const BLOGS = [
   },
   {
     slug: "blog-7",
+    publishedAt: "2025-01-08T16:00:00Z",
     title:
       "Creating a Harmonious Home: Alf DaFre’s Home Concept for Personalized, Balanced Spaces",
     excerpt:
@@ -162,6 +169,7 @@ export const BLOGS = [
   },
   {
     slug: "blog-8",
+    publishedAt: "2025-01-09T16:00:00Z",
     title: "Discovering Falmec: Where Elegance Meets Functionality",
     excerpt:
       "Falmec’s elegant range hoods combine stunning aesthetics with advanced functionality, creating the perfect blend of beauty and performance in the kitchen.",
@@ -179,6 +187,7 @@ export const BLOGS = [
   },
   {
     slug: "blog-9",
+    publishedAt: "2025-01-10T16:00:00Z",
     title:
       "Transforming Homes: Modernbrands Boasts the Best of Italian Luxury Furniture",
     excerpt:
@@ -199,6 +208,7 @@ export const BLOGS = [
   },
   {
     slug: "blog-10",
+    publishedAt: "2025-01-12T16:00:00Z",
     title: "Transform Your Kitchen with ILVE’s New Built-In Series",
     excerpt:
       "For over 50 years, ILVE has been a leader in crafting premium kitchen appliances that seamlessly blend tradition with innovative technology. Discover their new built-in series for a sleek and functional kitchen.",
@@ -218,6 +228,7 @@ export const BLOGS = [
   },
   {
     slug: "blog-11",
+    publishedAt: "2025-01-13T16:00:00Z",
     title:
       "Creating a Harmonious Home: Alf DaFre’s Home Concept for Personalized, Balanced Spaces",
     excerpt:
@@ -238,6 +249,7 @@ export const BLOGS = [
   },
   {
     slug: "blog-12",
+    publishedAt: "2025-01-14T16:00:00Z",
     title: "Discovering Falmec: Where Elegance Meets Functionality",
     excerpt:
       "Falmec’s elegant range hoods combine stunning aesthetics with advanced functionality, creating the perfect blend of beauty and performance in the kitchen.",
@@ -261,6 +273,7 @@ export const BLOGS = [
   },
   {
     slug: "blog-13",
+    publishedAt: "2025-01-15T16:00:00Z",
     title:
       "Transforming Homes: Modernbrands Boasts the Best of Italian Luxury Furniture",
     excerpt:
@@ -289,6 +302,7 @@ export const BLOGS = [
   },
   {
     slug: "blog-14",
+    publishedAt: "2025-01-16T16:00:00Z",
     title: "Transform Your Kitchen with ILVE’s New Built-In Series",
     excerpt:
       "For over 50 years, ILVE has been a leader in crafting premium kitchen appliances that seamlessly blend tradition with innovative technology. Discover their new built-in series for a sleek and functional kitchen.",
@@ -316,6 +330,7 @@ export const BLOGS = [
   },
   {
     slug: "blog-15",
+    publishedAt: "2025-01-17T16:00:00Z",
     title:
       "Creating a Harmonious Home: Alf DaFre’s Home Concept for Personalized, Balanced Spaces",
     excerpt:
@@ -344,6 +359,7 @@ export const BLOGS = [
   },
   {
     slug: "blog-16",
+    publishedAt: "2025-01-18T16:00:00Z",
     title: "Discovering Falmec: Where Elegance Meets Functionality",
     excerpt:
       "Falmec’s elegant range hoods combine stunning aesthetics with advanced functionality, creating the perfect blend of beauty and performance in the kitchen.",
