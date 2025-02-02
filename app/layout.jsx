@@ -66,7 +66,7 @@ export default function RootLayout({ children }) {
         <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
           <div className="relative flex flex-col h-screen">
             <Navbar />
-            <main className="container mx-auto max-w-7xl py-8 px-6 flex-grow">
+            <main>
               {children}
               <SpeedInsights />
             </main>

@@ -40,7 +40,7 @@ export default function HomePage() {
                   src={image.desktopSrc}
                   alt={image.alt}
                   loading="eager"
-                  className="hidden md:block"
+                  className="object-cover object-center hidden md:block"
                 />
                 <Image
                   src={image.mobileSrc}
@@ -55,7 +55,7 @@ export default function HomePage() {
       </section>
 
       {/* About Section */}
-      <section className="py-12 bg-white text-center">
+      <section className="mx-auto max-w-7xl py-8 px-6 bg-white text-center">
         <div className="container mx-auto space-y-4">
           <div>
             <h2 className={title()}>{heroSection.heading}</h2>
@@ -71,7 +71,7 @@ export default function HomePage() {
       </section>
 
       {/* Brands Section */}
-      <section className="py-12">
+      <section className="mx-auto max-w-7xl px-6 py-12">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold text-center mb-8">Our Partners</h2>
           <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -104,7 +104,7 @@ export default function HomePage() {
       </section>
 
       {/* About Us Section */}
-      <section className="py-12 flex justify-center gap-4 items-center flex-col-reverse bg-white text-center md:flex-row">
+      <section className="mx-auto max-w-7xl px-6 py-12 flex justify-center gap-4 items-center flex-col-reverse bg-white text-center md:flex-row">
         <div className="container mx-auto flex flex-col items-center justify-center">
           <h2 className="text-3xl font-bold mb-4">{aboutSection.title}</h2>
           <div className="space-y-2 max-w-xl text-sm text-justify sm:text-md">
@@ -126,7 +126,7 @@ export default function HomePage() {
 
       {/* Blogs Section */}
       {blogSection.blogs.length > 0 && (
-        <section className="py-12 bg-gray-50">
+        <section className="mx-auto max-w-7xl px-6 py-12 bg-gray-50">
           <div className="container mx-auto">
             <h2 className="text-3xl font-bold text-center mb-8">Blogs</h2>
             <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -162,7 +162,7 @@ export default function HomePage() {
       )}
 
       {/* Contact Us Section */}
-      <section className="py-12 flex justify-center gap-4 items-center flex-col bg-white text-center md:flex-row">
+      <section className="mx-auto max-w-7xl px-6 py-12 flex justify-center gap-4 items-center flex-col bg-white text-center md:flex-row">
         <Image
           src={contactSection.image}
           alt={contactSection.alt}

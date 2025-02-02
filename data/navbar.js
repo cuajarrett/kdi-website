@@ -3,7 +3,7 @@ import { BRANDS } from "./brands";
 
 export const NAVBAR = {
   logo: {
-    src: "/logos/KDI_Alternative Logo.png",
+    src: "/logos/KDI Official Logo Files_KDI Official Logo.png",
     alt: "Kassi Distributors Inc. Logo Mark",
     link: "/",
   },
@@ -16,6 +16,10 @@ export const NAVBAR = {
         logo,
         link: `/brands/${slug}`,
       })),
+    },
+    {
+      label: "Projects",
+      link: "/projects",
     },
     {
       label: "Showroom",

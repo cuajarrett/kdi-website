@@ -36,7 +36,7 @@ export const Navbar = () => {
       isBordered
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
-      maxWidth="xl"
+      maxWidth="full"
       position="sticky"
     >
       <NavbarContent>
@@ -50,7 +50,7 @@ export const Navbar = () => {
             href={logo.link}
           >
             <Image
-              height={150}
+              height={75}
               src={logo.src}
               alt={logo.alt}
               className="object-contain transform transition hover:scale-105"
