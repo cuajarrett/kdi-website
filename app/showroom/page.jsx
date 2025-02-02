@@ -49,8 +49,8 @@ export default function ShowroomPage() {
       {/* Showroom Addresses and Google Map */}
       <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Addresses */}
-        <div>
-          <p className="mb-4">{writeUp}</p>
+        <div className="flex flex-col justify-center">
+          {/* <p className="mb-4">{writeUp}</p> */}
           {showroomAddresses.map(
             ({ name, address, googleMaps, openingHours, phones }, index) => (
               <div key={index} className="mb-6">

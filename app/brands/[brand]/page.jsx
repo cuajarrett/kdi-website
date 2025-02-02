@@ -1,6 +1,6 @@
-import { Image } from "@nextui-org/image";
 import { Button } from "@nextui-org/button";
 import { Link } from "@nextui-org/link";
+import Image from "next/image";
 
 import { BRANDS } from "@/data/brands";
 import { subtitle, title } from "@/components/primitives";
@@ -64,13 +64,15 @@ export default async function BrandItemPage({ params }) {
     <>
       {/* Hero Section */}
       {!comingSoon ? (
-        <section className="flex justify-center items-center p-4 gap-8 relative bg-gray-100 rounded-xl flex-col sm:flex-row sm:p-12">
-          <Image
-            className="w-full sm:w-[75vw] lg:w-[40vw]"
-            src={logo.src}
-            alt={logo.alt}
-            layout="fill"
-          />
+        <section className="flex justify-center items-center p-4 relative bg-gray-100 rounded-xl flex-col lg:gap-8 lg:flex-row sm:p-12">
+          <div className="relative h-48 md:h-64 w-screen">
+            <Image
+              src={logo.src}
+              alt={logo.alt}
+              className="object-contain"
+              fill
+            />
+          </div>
           <div className="flex flex-col text-center sm:text-left">
             <h3 className="text-3xl font-bold">{name}</h3>
             <p className="text-sm text-gray-700 mb-4 text-justify sm:text-lg">
@@ -98,8 +100,15 @@ export default async function BrandItemPage({ params }) {
           </div>
         </section>
       ) : (
-        <section className="flex flex-col justify-center items-center my-auto">
-          <Image className="" src={logo.src} alt={logo.alt} layout="fill" />
+        <section className="min-h-[50vh] flex flex-col justify-center items-center my-auto">
+          <div className="relative h-48 md:h-64 w-64">
+            <Image
+              src={logo.src}
+              alt={logo.alt}
+              className="object-contain"
+              fill
+            />
+          </div>
           <p className="text-sm text-gray-700 mb-4 sm:text-lg">{description}</p>
         </section>
       )}

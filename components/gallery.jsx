@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { Image } from "@nextui-org/image";
+import Image from "next/image";
 
 export default function Gallery({ gallery }) {
   const router = useRouter();
@@ -20,7 +20,9 @@ export default function Gallery({ gallery }) {
           onClick={() => handleImageClick()}
         >
           {/* Image */}
-          <Image src={src} alt={caption} className="h-72 object-cover" />
+          <div className="relative h-72">
+            <Image src={src} alt={caption} className="object-cover" fill />
+          </div>
 
           {/* Hover Overlay */}
           <div className="z-10 absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">

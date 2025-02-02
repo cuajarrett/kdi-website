@@ -1,11 +1,13 @@
+import Image from "next/image";
+
 export const BLOGS = [
   {
-    slug: "blog-1",
+    slug: "innovative-ideas-made-by-nolte-kuchen",
     publishedAt: "2024-12-20T16:00:00Z",
-    title:
-      "Frigerio Horizon Sofa: Italian Craftsmanship with Modular Flexibility",
+    title: "Innovative ideas made by Nolte Küchen",
+    subtitle: "From functional to atmospheric",
     excerpt:
-      "When it comes to premium furniture that effortlessly combines aesthetics with comfort, the Frigerio Horizon Sofa is a standout. This modular masterpiece isn’t just a piece of furniture; it’s art.",
+      "Light is more than just illumination – it creates atmosphere and ensures a pleasant ambience in your kitchen. With Nolte Küchen’s diverse lighting options, you can easily enhance your kitchen. Whether functional work light, cosy lighting for a homely flair, or indirect lighting without glare – we have the right solution for every style and budget. Thanks to modern LED technologies, you can flexibly adjust light intensity and colour, from cool to warm white, perfectly matched to any mood. Discover how you can ideally showcase your kitchen with light.",
     content: (
       <>
         <p>
@@ -30,40 +32,250 @@ export const BLOGS = [
         </p>
       </>
     ),
-    image: "/gallery/Showroom/image1.webp",
+    image:
+      "https://nolte-prod-ebcwh6b9axcgebb3.z01.azurefd.net/-/jssmedia/project/nolte-jss/corporate-website/produkt-moods/soft_lack/nolte_kchen_soft_lack_tiefblau_legno/3to4.jpg?mw=1920&as=0",
   },
   {
-    slug: "blog-2",
+    slug: "lighting-systems-and-concepts-for-the-kitchen",
     publishedAt: "2024-12-27T16:00:00Z",
-    title:
-      "Silence in the Kitchen: Falmec’s Revolutionary NRS Technology for Noise-Free Range Hoods",
+    title: "Lighting systems and concepts for the kitchen",
+    subtitle: "From functional to atmospheric",
     excerpt:
-      "When the clatter of pots accompanies the aroma of a great meal, the kitchen becomes a sanctuary. With its innovative NRS technology, Falmec brings peace to your culinary creations by silencing noise.",
+      "Light is more than just illumination – it creates atmosphere and ensures a pleasant ambience in your kitchen. With Nolte Küchen’s diverse lighting options, you can easily enhance your kitchen. Whether functional work light, cosy lighting for a homely flair, or indirect lighting without glare – we have the right solution for every style and budget. Thanks to modern LED technologies, you can flexibly adjust light intensity and colour, from cool to warm white, perfectly matched to any mood. Discover how you can ideally showcase your kitchen with light.",
     content: (
       <>
-        <p>
-          Falmec’s NRS technology is designed for those who crave a quieter
-          kitchen experience. This revolutionary noise-reduction system is not
-          just about convenience—it’s about creating a calm and peaceful
-          environment.
-        </p>
-        <p>
-          Experience the next level of kitchen innovation with Falmec, where
-          cutting-edge technology meets elegant design.
-        </p>
-        <p>
-          Falmec’s NRS technology is designed for those who crave a quieter
-          kitchen experience. This revolutionary noise-reduction system is not
-          just about convenience—it’s about creating a calm and peaceful
-          environment.
-        </p>
-        <p>
-          Experience the next level of kitchen innovation with Falmec, where
-          cutting-edge technology meets elegant design.
-        </p>
+        <div>
+          <h2 className="text-4xl font-bold">
+            Indirect lighting and mood lighting
+          </h2>
+          <p>
+            Lighting can make the crucial difference in decor. Rooms that
+            initially appear cool and sterile instantly become warm and inviting
+            with the right lighting. We show you various ways to create a cosy
+            atmosphere in your rooms:
+          </p>
+          <br />
+        </div>
+        <div className="flex gap-4 flex-col-reverse sm:flex-row">
+          <div className="my-auto flex-1">
+            <h2 className="text-4xl font-bold">
+              MatrixART, illuminated handle groove
+            </h2>
+            <p className="text-justify">
+              The illuminated handle grooves of the MatrixArt design give your
+              kitchen a special atmosphere and emphasise the clear lines. At the
+              same time, they provide pleasant, indirect lighting. Both the
+              horizontal and vertical handle grooves can be illuminated
+              individually.
+            </p>
+          </div>
+          <div className="flex-1">
+            <Image
+              src="https://nolte-prod-ebcwh6b9axcgebb3.z01.azurefd.net/-/jssmedia/project/nolte-jss/corporate-website/kampagnen/neuheiten-2024-landing-page/die-letzte_22545_nolte_soft-lack_caramel-wei_01/die-letzte_22545_nolte_soft-lack_caramel-wei_01-3to2.jpg?mw=1440&amp;as=0"
+              alt=" "
+              sizes="(min-width: 1024px) 1024px, (min-width: 768px) 500px, 100vw"
+              className="lazyload"
+              width="1772"
+              height="1141"
+            />
+          </div>
+        </div>
+        <div className="flex gap-4 flex-col sm:flex-row">
+          <div className="flex-1">
+            <Image
+              src="https://nolte-prod-ebcwh6b9axcgebb3.z01.azurefd.net/-/jssmedia/project/nolte-jss/corporate-website/planungs-varianten/lugano-lack---schwarz-softmatt/highlight-2_22545_nolte_lugano_schwarz_04/highlight-2_22545_nolte_lugano_schwarz_04-3to2.jpg?mw=1440&amp;as=0"
+              alt=" "
+              sizes="(min-width: 1024px) 1024px, (min-width: 768px) 500px, 100vw"
+              className="lazyload"
+              width="1181"
+              height="1771"
+            />
+          </div>
+          <div className="my-auto flex-1">
+            <h2 className="text-4xl font-bold">Ambient lighting</h2>
+            <p className="text-justify">
+              Lighting in display cabinets is often not consciously noticed, yet
+              it contributes significantly to a harmonious atmosphere. It
+              highlights dishes, cups, and glasses effectively, optimally
+              showcasing them. The lighting also enhances the depth effect in
+              the display cabinet, creating a spacious feel, especially in
+              smaller rooms.
+            </p>
+          </div>
+        </div>
+        <div className="flex gap-4 flex-col-reverse sm:flex-row">
+          <div className="my-auto flex-1">
+            <h2 className="text-4xl font-bold">
+              Recessed lighting in side and base cabinet shelves
+            </h2>
+            <p className="text-justify">
+              Those who prefer open shelves instead of display cabinets
+              don&#39;t have to miss out on recessed lighting here either.
+            </p>
+          </div>
+          <div className="flex-1">
+            <Image
+              src="https://nolte-prod-ebcwh6b9axcgebb3.z01.azurefd.net/-/jssmedia/project/nolte-jss/corporate-website/produkt-moods/artline/22545_nolte_artline-stripe-wood_crema_05/22545_nolte_artline-stripe-wood_crema_05-3to2.jpg?mw=1440&amp;as=0"
+              alt=" "
+              sizes="(min-width: 1024px) 1024px, (min-width: 768px) 500px, 100vw"
+              className="lazyload"
+              width="1200"
+              height="1815"
+            />
+          </div>
+        </div>
+        <div className="flex gap-4 flex-col sm:flex-row">
+          <div className="flex-1">
+            <Image
+              src="https://nolte-prod-ebcwh6b9axcgebb3.z01.azurefd.net/-/jssmedia/project/nolte-jss/corporate-website/planungs-varianten/artline---stripe-wood-crema/highlight-1_22545_nolte_artline-stripe-wood_crema_06/highlight-1_22545_nolte_artline-stripe-wood_crema_06-3to2.jpg?mw=1440&amp;as=0"
+              alt=" "
+              sizes="(min-width: 1024px) 1024px, (min-width: 768px) 500px, 100vw"
+              className="lazyload"
+              width="1772"
+              height="1098"
+            />
+          </div>
+          <div className="my-auto flex-1">
+            <h2 className="text-4xl font-bold">Railing system</h2>
+            <p className="text-justify">
+              The MotionLINE railing system offers another stylish option for
+              indirect lighting. The individual elements can be combined
+              individually and equipped with up to three LED strips, depending
+              on the planning situation.
+            </p>
+          </div>
+        </div>
+        <div className="flex gap-4 flex-col-reverse sm:flex-row">
+          <div className="my-auto flex-1">
+            <h2 className="text-4xl font-bold">Wall shelves</h2>
+            <p className="text-justify">
+              A wall shelf is often used for individual decoration. When
+              illuminated, it can create a cosy reading corner, a place where
+              you will enjoy spending your time.
+            </p>
+          </div>
+          <div className="flex-1">
+            <Image
+              src="https://nolte-prod-ebcwh6b9axcgebb3.z01.azurefd.net/-/jssmedia/project/nolte-jss/corporate-website/nolte-blog/21830_nolte_lugano_hennarot_09/21830_nolte_lugano_hennarot_09-3to2.jpg?mw=1440&amp;as=0"
+              alt=" "
+              sizes="(min-width: 1024px) 1024px, (min-width: 768px) 500px, 100vw"
+              className="lazyload"
+              width="7782"
+              height="5300"
+            />
+          </div>
+        </div>
+
+        <div>
+          <h2 className="text-4xl font-bold">
+            Effective and functional: Illumination of the work surface
+          </h2>
+          <p>
+            A well-lit work surface is essential in the kitchen for cooking and
+            preparing food. The lighting should be both practical and
+            functional. Below, we show you various options for optimally
+            integrating work lighting:
+          </p>
+        </div>
+
+        <div className="flex gap-4 flex-col sm:flex-row">
+          <div className="flex-1">
+            <Image
+              src="https://nolte-prod-ebcwh6b9axcgebb3.z01.azurefd.net/-/jssmedia/project/nolte-jss/corporate-website/planungs-varianten/artline---stripe-wood-coffee/highlight-1_22545_nolte_artline_stripewoodcoffee_12/highlight-1_22545_nolte_artline_stripewoodcoffee_12-3to2.jpg?mw=1440&amp;as=0"
+              alt=" "
+              sizes="(min-width: 1024px) 1024px, (min-width: 768px) 500px, 100vw"
+              className="lazyload"
+              width="1772"
+              height="1182"
+            />
+          </div>
+          <div className="my-auto flex-1">
+            <h2 className="text-4xl font-bold">
+              Under-cabinet or recessed LED lighting
+            </h2>
+            <p className="text-justify">
+              Under-cabinet lighting is installed by the kitchen fitter at the
+              bottom of the cabinet, while recessed lights almost disappear
+              flush with the surface, optimally illuminating the work surface.
+              Ring lights look particularly aesthetic here, as the decor inside
+              the light is repeated.
+            </p>
+          </div>
+        </div>
+        <div className="flex gap-4 flex-col-reverse sm:flex-row">
+          <div className="my-auto flex-1">
+            <h2 className="text-4xl font-bold">
+              Integrated strips in the cabinet base
+            </h2>
+            <p className="text-justify">
+              The light strips in the cabinet base provide good illumination of
+              the work surface and create a cosy atmosphere. At the same time,
+              the interior of the cabinet is subtly illuminated, making it
+              easier to access items such as dishes or food.
+            </p>
+          </div>
+          <div className="flex-1">
+            <Image
+              src="https://nolte-prod-ebcwh6b9axcgebb3.z01.azurefd.net/-/jssmedia/project/nolte-jss/corporate-website/nolte-blog/schrankbeleuchtung_01/schrankbeleuchtung_01-3to2.jpg?mw=1440&amp;as=0"
+              alt=" "
+              sizes="(min-width: 1024px) 1024px, (min-width: 768px) 500px, 100vw"
+              className="lazyload"
+              width="7008"
+              height="4672"
+            />
+          </div>
+        </div>
+
+        <div className="flex gap-4 flex-col sm:flex-row">
+          <div className="flex-1">
+            <Image
+              src="https://nolte-prod-ebcwh6b9axcgebb3.z01.azurefd.net/-/jssmedia/project/nolte-jss/corporate-website/mood-detailseiten-21/offene-eckkueche-fuer-angehende-kochaholics/nk27540_soft_lack___sahara___manhattan___eiche_graphitsilber/3to2.jpg?mw=1440&amp;as=0"
+              alt="Soft Lack"
+              sizes="(min-width: 1024px) 1024px, (min-width: 768px) 500px, 100vw"
+              className="lazyload"
+              width="1620"
+              height="1080"
+            />
+          </div>
+          <div className="my-auto">
+            <h2 className="text-4xl font-bold">
+              Fully illuminated wall cabinet bases
+            </h2>
+            <p className="text-justify">
+              Nothing more: The LED light base in the wall cabinet provides
+              top-quality work lighting.
+            </p>
+          </div>
+        </div>
+        <div className="flex gap-4 flex-col-reverse sm:flex-row">
+          <div className="my-auto flex-1">
+            <h2 className="text-4xl font-bold">Illuminated drawers</h2>
+            <p className="text-justify">
+              Drawer lighting ensures that all utensils are always clearly
+              visible and can be arranged in an organised way. This option is
+              also very aesthetic. You can add a special touch to your Nolte
+              kitchen by choosing the interior fittings of the drawers and
+              cabinets from our nolteneo design line. The neoBox drawer is
+              particularly high-quality and, among other things, is also
+              available with interior lighting. This gives your kitchen an
+              extraordinary touch with the interior fittings.
+            </p>
+          </div>
+          <div className="flex-1">
+            <Image
+              src="https://nolte-prod-ebcwh6b9axcgebb3.z01.azurefd.net/-/jssmedia/project/nolte-jss/corporate-website/product-detail-pages/neo/nk28603_neopure___metall_gold___neolodge___eiche_geschwaerzt/3to2.jpg?mw=1440&amp;as=0"
+              alt="neoPURE"
+              sizes="(min-width: 1024px) 1024px, (min-width: 768px) 500px, 100vw"
+              className="lazyload"
+              width="720"
+              height="1080"
+            />
+          </div>
+        </div>
       </>
     ),
-    image: "/gallery/Showroom/image2.webp",
+    image:
+      "https://nolte-prod-ebcwh6b9axcgebb3.z01.azurefd.net/-/jssmedia/project/nolte-jss/corporate-website/mood-detailseiten-21/offene-eckkueche-fuer-angehende-kochaholics/nk27540_soft_lack___sahara___manhattan___eiche_graphitsilber/21to9.jpg?mw=1920&as=0",
   },
   {
     slug: "blog-3",

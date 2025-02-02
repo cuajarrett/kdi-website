@@ -2,9 +2,9 @@
 
 import { Button } from "@nextui-org/button";
 import { Link } from "@nextui-org/link";
-import { Image } from "@nextui-org/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
+import Image from "next/image";
 
 import { Card } from "@/components/card";
 import { HOME } from "@/data";
@@ -35,18 +35,20 @@ export default function HomePage() {
         >
           {heroSection.images.map((image, index) => (
             <SwiperSlide key={index}>
-              <div className="relative w-full h-full">
+              <div className="relative w-screen h-[50vh] lg:h-[75vh]">
                 <Image
                   src={image.desktopSrc}
                   alt={image.alt}
                   loading="eager"
-                  className="object-cover object-center hidden md:block"
+                  className="object-cover object-bottom hidden md:block"
+                  fill
                 />
                 <Image
                   src={image.mobileSrc}
                   alt={image.alt}
                   loading="eager"
-                  className="block md:hidden"
+                  className="object-cover object-bottom md:hidden"
+                  fill
                 />
               </div>
             </SwiperSlide>
@@ -82,6 +84,7 @@ export default function HomePage() {
                 image={logo.src}
                 title={name}
                 excerpt={description}
+                contain
               />
             ))}
           </div>
@@ -105,7 +108,7 @@ export default function HomePage() {
 
       {/* About Us Section */}
       <section className="mx-auto max-w-7xl px-6 py-12 flex justify-center gap-4 items-center flex-col-reverse bg-white text-center md:flex-row">
-        <div className="container mx-auto flex flex-col items-center justify-center">
+        <div className="mx-auto flex flex-col items-center justify-center">
           <h2 className="text-3xl font-bold mb-4">{aboutSection.title}</h2>
           <div className="space-y-2 max-w-xl text-sm text-justify sm:text-md">
             {aboutSection.description}
@@ -121,7 +124,9 @@ export default function HomePage() {
             {aboutSection.cta}
           </Button>
         </div>
-        <Image src={aboutSection.image} alt={aboutSection.alt} width={600} />
+        <div className="relative size-96">
+          <Image src={aboutSection.image} alt={aboutSection.alt} fill />
+        </div>
       </section>
 
       {/* Blogs Section */}
@@ -163,12 +168,10 @@ export default function HomePage() {
 
       {/* Contact Us Section */}
       <section className="mx-auto max-w-7xl px-6 py-12 flex justify-center gap-4 items-center flex-col bg-white text-center md:flex-row">
-        <Image
-          src={contactSection.image}
-          alt={contactSection.alt}
-          width={600}
-        />
-        <div className="container mx-auto flex flex-col justify-center items-center">
+        <div className="relative size-96">
+          <Image src={contactSection.image} alt={contactSection.alt} fill />
+        </div>
+        <div className="mx-auto flex flex-col justify-center items-center">
           <h2 className="text-3xl font-bold mb-4">{contactSection.title}</h2>
           <div className="space-y-2 max-w-xl text-sm sm:text-md">
             {contactSection.description}

@@ -64,9 +64,9 @@ export const BRANDS = [
   },
   {
     comingSoon: true,
-    slug: "cacarro",
-    name: "Cacarro",
-    logo: { src: "/logos/Cacarro.png", alt: "Cacarro Logo" },
+    slug: "caccaro",
+    name: "Caccarro",
+    logo: { src: "/logos/Caccaro.png", alt: "Caccaro Logo" },
     description: "Coming Soon",
     catalogue: null,
     gallery: [],

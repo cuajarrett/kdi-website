@@ -28,7 +28,7 @@ export default function BlogsPage() {
   };
 
   return (
-    <>
+    <div className="mx-auto max-w-7xl py-8 px-6 flex-grow">
       <h1 className={title()}>Blogs</h1>
       {BLOGS.length > 0 ? (
         <>
@@ -69,6 +69,6 @@ export default function BlogsPage() {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 }

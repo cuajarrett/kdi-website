@@ -1,4 +1,4 @@
-import { Image } from "@nextui-org/image";
+import Image from "next/image";
 
 import { title } from "@/components/primitives";
 import { ABOUT } from "@/data";
@@ -68,8 +68,13 @@ export default function AboutPage() {
               className="flex flex-col items-center text-center space-y-4"
             >
               {/* Image */}
-              <div className="w-full h-64 overflow-hidden">
-                <Image src={service.image} alt={service.title} />
+              <div className="relative w-full h-64 overflow-hidden">
+                <Image
+                  src={service.image}
+                  alt={service.title}
+                  className="object-cover"
+                  fill
+                />
               </div>
 
               {/* Title */}
@@ -108,7 +113,14 @@ export default function AboutPage() {
                 {year}
               </div>
               <div className="ml-6 lg:ml-0 lg:mt-10">
-                <Image src={image} alt={`${year} image`} />
+                <div className="relative w-full h-64">
+                  <Image
+                    src={image}
+                    alt={`${year} image`}
+                    className="object-cover"
+                    fill
+                  />
+                </div>
                 <h4 className="mt-2 text-base text-gray-700 text-justify">
                   {description}
                 </h4>
@@ -121,25 +133,36 @@ export default function AboutPage() {
       {/* Mission and Vision Section */}
       <section className="text-center">
         <h2 className={title()}>Mission & Vision</h2>
-        <div className="text-left grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Mission */}
-          <div className="bg-white shadow-md p-6 transition hover:shadow-2xl">
-            <h3 className="text-2xl font-bold mb-4">
-              {missionVisionSection.mission.title}
-            </h3>
-            <p className="text-base text-gray-700 whitespace-pre-wrap">
-              {missionVisionSection.mission.description}
-            </p>
-          </div>
 
-          {/* Vision */}
-          <div className="bg-white shadow-md p-6 transition hover:shadow-2xl">
-            <h3 className="text-2xl font-bold mb-4">
-              {missionVisionSection.vision.title}
-            </h3>
-            <p className="text-base text-gray-700 whitespace-pre-wrap">
-              {missionVisionSection.vision.description}
-            </p>
+        <div className="text-left grid grid-cols-1 mt-6 lg:grid-cols-2 gap-8">
+          <div className="my-auto relative w-full h-64 sm:h-96">
+            <Image
+              src={missionVisionSection.image}
+              alt="Mission and Vision Statements"
+              className="object-cover"
+              fill
+            />
+          </div>
+          <div className="my-auto">
+            {/* Mission */}
+            <div className="p-6">
+              <h3 className="text-2xl font-bold mb-4">
+                {missionVisionSection.mission.title}
+              </h3>
+              <p className="text-base text-gray-700 whitespace-pre-wrap">
+                {missionVisionSection.mission.description}
+              </p>
+            </div>
+
+            {/* Vision */}
+            <div className="p-6">
+              <h3 className="text-2xl font-bold mb-4">
+                {missionVisionSection.vision.title}
+              </h3>
+              <p className="text-base text-gray-700 whitespace-pre-wrap">
+                {missionVisionSection.vision.description}
+              </p>
+            </div>
           </div>
         </div>
       </section>

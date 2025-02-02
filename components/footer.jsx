@@ -1,7 +1,7 @@
 "use client";
 
 import { Link } from "@nextui-org/link";
-import { Image } from "@nextui-org/image";
+import Image from "next/image";
 
 import { FOOTER, HOME } from "@/data"; // Import the footer data from your data file
 
@@ -17,10 +17,11 @@ export const Footer = () => {
 
   return (
     <footer className="bg-gray-100">
-      <div className="container mx-auto max-w-7xl py-6 px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="py-6 px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {/* Column 1: Company Info */}
         <div>
           <Image
+            width={200}
             height={75}
             src={logo.src}
             alt={logo.alt}

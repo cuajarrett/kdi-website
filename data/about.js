@@ -9,12 +9,9 @@ export const ABOUT = {
           curating the finest international brands across a wide spectrum of
           price points, we ensure that everyone can Live in Style and Comfort,
           whether their preference leans toward premium luxury or more
-          approachable elegance.
-        </p>
-        <p>
-          Our operation combines innovation, attentive service, and decades of
-          manufacturing expertise to create interiors where practicality meets
-          refined design.
+          approachable elegance. Our operation combines innovation, attentive
+          service, and decades of manufacturing expertise to create interiors
+          where practicality meets refined design.
         </p>
       </>
     ),
@@ -69,15 +66,16 @@ export const ABOUT = {
     },
   ],
   missionVisionSection: {
+    image: "/gallery/Home/About.webp",
     mission: {
       title: "Our Mission",
       description:
-        "At Kassi Distributors Inc., our mission is to bridge global excellence with local aspirations by providing world-class products tailored to the Filipino market. Leveraging our heritage and industry expertise, we deliver top solutions and build lasting relationships that empower our clients to live in style and comfort. We are committed to innovation, quality, and personalized care in everything we do.",
+        "At Kassi Distributors Inc., our mission is to connect global excellence with local aspirations by delivering world-class products tailored to the Filipino market. Guided by our heritage and expertise, we provide top-tier solutions, build lasting relationships, and empower clients to live in style and comfort—always driven by innovation, quality, and personalized care.",
     },
     vision: {
       title: "Our Vision",
       description:
-        "To elevate every Filipino home by delivering products and solutions that merge daily convenience with time-honored craftsmanship. We aim to set new benchmarks in the Philippine design market, fostering a seamless blend of global standards and local character in every space we touch.",
+        "We aim to elevate every Filipino home through products and solutions that blend daily convenience with time-honored craftsmanship. By setting new benchmarks in Philippine design, we seamlessly unite global standards with local character in every space we touch.",
     },
   },
 };

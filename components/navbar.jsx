@@ -20,7 +20,7 @@ import { Accordion, AccordionItem } from "@nextui-org/accordion";
 import { Button } from "@nextui-org/button";
 import { link as linkStyles } from "@nextui-org/theme";
 import { Link } from "@nextui-org/link";
-import { Image } from "@nextui-org/image";
+import Image from "next/image";
 import clsx from "clsx";
 
 import { ChevronDown } from "@/components/icons";
@@ -50,6 +50,7 @@ export const Navbar = () => {
             href={logo.link}
           >
             <Image
+              width={200}
               height={75}
               src={logo.src}
               alt={logo.alt}
@@ -167,8 +168,8 @@ export const Navbar = () => {
                           href={link}
                         >
                           <Image
-                            height={20}
-                            width={40}
+                            height={25}
+                            width={50}
                             className="object-contain"
                             src={logo.src}
                             alt={logo.alt}

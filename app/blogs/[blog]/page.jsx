@@ -1,9 +1,10 @@
-import { Image } from "@nextui-org/image";
 import { Link } from "@nextui-org/link";
 import { Button } from "@nextui-org/button";
+import Image from "next/image";
 
 import { BLOGS } from "@/data/blogs";
-import { title } from "@/components/primitives";
+import { subtitle, title } from "@/components/primitives";
+import clsx from "clsx";
 
 // Function to generate dynamic metadata for SEO
 export async function generateMetadata({ params }) {
@@ -65,22 +66,36 @@ export default async function BlogDetailPage({ params }) {
   }
 
   return (
-    <>
-      <article className="container mx-auto px-4 pb-12">
-        <h1 className={title()}>{blog.title}</h1>
+    <article>
+      <div className="relative w-screen h-[75vh] mb-6">
+        <Image
+          src={blog.image}
+          alt={blog.title}
+          className="object-cover"
+          fill
+        />
+      </div>
+      <div className="text-base mx-auto max-w-7xl py-8 px-6 flex-grow">
+        <h1 className={clsx(title(), "max-w-sm")}>{blog.title}</h1>
+        {blog.subtitle && <h3 className={subtitle()}>{blog.subtitle}</h3>}
         <p className="text-sm text-gray-500 mb-4">
           {new Date(blog.publishedAt).toDateString()}
         </p>
 
-        <Image
-          src={blog.image}
-          alt={blog.title}
-          className="w-full rounded-lg mb-6"
-        />
-
-        <div className="prose max-w-none space-y-2">{blog.content}</div>
-      </article>
-    </>
+        <div className="max-w-lg text-justify mb-4">{blog.excerpt}</div>
+        <div className="prose max-w-none space-y-12">{blog.content}</div>
+        <Button
+          className="mt-6"
+          as={Link}
+          href="/contact"
+          color="primary"
+          variant="solid"
+          size="lg"
+        >
+          Contact Us
+        </Button>
+      </div>
+    </article>
   );
 }
 

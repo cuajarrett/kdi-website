@@ -14,6 +14,7 @@ export default function BrandsListPage() {
             image={logo.src}
             title={name}
             excerpt={description}
+            contain
           />
         ))}
       </div>
