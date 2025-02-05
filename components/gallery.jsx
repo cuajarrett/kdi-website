@@ -16,7 +16,7 @@ export default function Gallery({ gallery }) {
           <Image
             src={src}
             alt={caption}
-            className="object-cover"
+            className="h-72 object-cover"
             width={720}
             height={360}
           />
