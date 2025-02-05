@@ -85,10 +85,11 @@ export default async function BlogDetailPage({ params }) {
         <div className="max-w-lg text-justify mb-4">{blog.excerpt}</div>
         <div className="prose max-w-none space-y-12">{blog.content}</div>
 
-        <div className="max-w-lg text-justify mt-6">
+        <div className="text-center mt-6 py-8 space-y-4">
+          <h2 className={title()}>Inspired by this design?</h2>
           <p>
-            Inspired by this design? Let’s bring it to life. Our team is ready
-            to help you create a space that reflects your vision.
+            Let’s bring it to life. Our team is ready to help you create a space
+            that reflects your vision.
           </p>
           <Button
             as={Link}
