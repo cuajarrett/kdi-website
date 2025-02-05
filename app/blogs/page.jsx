@@ -45,15 +45,17 @@ export default function BlogsPage() {
           </div>
 
           {/* NextUI Pagination */}
-          <div className="flex justify-center items-center my-8">
-            <Pagination
-              total={totalPages}
-              initialPage={1}
-              onChange={handlePageChange}
-              size="lg"
-              color="primary"
-            />
-          </div>
+          {totalPages > 1 && (
+            <div className="flex justify-center items-center my-8">
+              <Pagination
+                total={totalPages}
+                initialPage={1}
+                onChange={handlePageChange}
+                size="lg"
+                color="primary"
+              />
+            </div>
+          )}
         </>
       ) : (
         <div className="flex flex-col items-center justify-center min-h-[40vh] px-4">

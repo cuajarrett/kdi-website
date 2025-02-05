@@ -66,7 +66,7 @@ export const ABOUT = {
     },
   ],
   missionVisionSection: {
-    image: "/gallery/Home/About.webp",
+    image: "/gallery/About/Mission Vision.jpg",
     mission: {
       title: "Our Mission",
       description:

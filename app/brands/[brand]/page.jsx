@@ -2,8 +2,8 @@ import { Button } from "@nextui-org/button";
 import { Link } from "@nextui-org/link";
 import Image from "next/image";
 
-import { BRANDS } from "@/data/brands";
-import { subtitle, title } from "@/components/primitives";
+import { BRANDS } from "@/data";
+import { title } from "@/components/primitives";
 import Gallery from "@/components/gallery";
 
 // Static paths generation
@@ -42,7 +42,7 @@ export default async function BrandItemPage({ params }) {
   if (!brandData) {
     return (
       <div className="flex flex-col items-center justify-center min-h-[40vh] px-4">
-        <div className="max-w-md text-center bg-white p-8 shadow-lg rounded-lg">
+        <div className="max-w-md text-center bg-white p-8 shadow-lg">
           <h1 className="text-3xl font-bold text-gray-800 mb-4">
             Brand Not Found
           </h1>
@@ -64,7 +64,7 @@ export default async function BrandItemPage({ params }) {
     <>
       {/* Hero Section */}
       {!comingSoon ? (
-        <section className="flex justify-center items-center p-4 relative bg-gray-100 rounded-xl flex-col lg:gap-8 lg:flex-row sm:p-12">
+        <section className="flex justify-center items-center p-4 relative bg-gray-100 flex-col lg:gap-8 lg:flex-row sm:p-12">
           <div className="relative h-48 md:h-64 w-screen">
             <Image
               src={logo.src}

@@ -1,36 +1,33 @@
 "use client";
 
-import { useRouter } from "next/navigation";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Gallery({ gallery }) {
-  const router = useRouter();
-
-  const handleImageClick = () => {
-    // Redirect to contact page with the image URL as a query parameter
-    router.push(`/contact`);
-  };
-
   return (
     <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {gallery.map(({ src, caption }, index) => (
-        <div
+        <Link
           key={index}
           className="relative group cursor-pointer overflow-hidden"
-          onClick={() => handleImageClick()}
+          href="/contact"
         >
           {/* Image */}
-          <div className="relative h-72">
-            <Image src={src} alt={caption} className="object-cover" fill />
-          </div>
+          <Image
+            src={src}
+            alt={caption}
+            className="object-cover"
+            width={720}
+            height={360}
+          />
 
           {/* Hover Overlay */}
           <div className="z-10 absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-            <span className="text-white text-lg font-bold">
+            <span className="text-center text-white text-lg font-bold">
               Are you interested?
             </span>
           </div>
-        </div>
+        </Link>
       ))}
     </div>
   );

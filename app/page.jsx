@@ -31,26 +31,26 @@ export default function HomePage() {
           pagination={{ clickable: true }}
           navigation
           loop
-          className="w-full md:h-[50vh] lg:h-[75vh]"
+          className="w-full md:h-[50vh] lg:h-[80vh]"
         >
           {heroSection.images.map((image, index) => (
             <SwiperSlide key={index}>
-              <div className="relative w-screen h-[50vh] lg:h-[75vh]">
-                <Image
-                  src={image.desktopSrc}
-                  alt={image.alt}
-                  loading="eager"
-                  className="object-cover object-bottom hidden md:block"
-                  fill
-                />
-                <Image
-                  src={image.mobileSrc}
-                  alt={image.alt}
-                  loading="eager"
-                  className="object-cover object-bottom md:hidden"
-                  fill
-                />
-              </div>
+              <Image
+                src={image.desktopSrc}
+                alt={image.alt}
+                loading="eager"
+                className="object-cover object-bottom hidden w-screen h-[50vh] lg:h-[80vh] md:block"
+                height={1920}
+                width={1080}
+              />
+              <Image
+                src={image.mobileSrc}
+                alt={image.alt}
+                loading="eager"
+                className="object-cover object-bottom w-screen h-[50vh] lg:h-[80vh] md:hidden"
+                height={1080}
+                width={1920}
+              />
             </SwiperSlide>
           ))}
         </Swiper>
@@ -124,14 +124,17 @@ export default function HomePage() {
             {aboutSection.cta}
           </Button>
         </div>
-        <div className="relative size-96">
-          <Image src={aboutSection.image} alt={aboutSection.alt} fill />
-        </div>
+        <Image
+          src={aboutSection.image}
+          alt={aboutSection.alt}
+          height={400}
+          width={400}
+        />
       </section>
 
       {/* Blogs Section */}
       {blogSection.blogs.length > 0 && (
-        <section className="mx-auto max-w-7xl px-6 py-12 bg-gray-50">
+        <section className="mx-auto max-w-7xl px-6 py-12">
           <div className="container mx-auto">
             <h2 className="text-3xl font-bold text-center mb-8">Blogs</h2>
             <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -168,9 +171,12 @@ export default function HomePage() {
 
       {/* Contact Us Section */}
       <section className="mx-auto max-w-7xl px-6 py-12 flex justify-center gap-4 items-center flex-col bg-white text-center md:flex-row">
-        <div className="relative size-96">
-          <Image src={contactSection.image} alt={contactSection.alt} fill />
-        </div>
+        <Image
+          src={contactSection.image}
+          alt={contactSection.alt}
+          height={400}
+          width={400}
+        />
         <div className="mx-auto flex flex-col justify-center items-center">
           <h2 className="text-3xl font-bold mb-4">{contactSection.title}</h2>
           <div className="space-y-2 max-w-xl text-sm sm:text-md">

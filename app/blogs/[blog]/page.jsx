@@ -84,16 +84,22 @@ export default async function BlogDetailPage({ params }) {
 
         <div className="max-w-lg text-justify mb-4">{blog.excerpt}</div>
         <div className="prose max-w-none space-y-12">{blog.content}</div>
-        <Button
-          className="mt-6"
-          as={Link}
-          href="/contact"
-          color="primary"
-          variant="solid"
-          size="lg"
-        >
-          Contact Us
-        </Button>
+
+        <div className="max-w-lg text-justify mt-6">
+          <p>
+            Inspired by this design? Let’s bring it to life. Our team is ready
+            to help you create a space that reflects your vision.
+          </p>
+          <Button
+            as={Link}
+            href="/contact"
+            color="primary"
+            variant="solid"
+            size="lg"
+          >
+            Contact Us
+          </Button>
+        </div>
       </div>
     </article>
   );
