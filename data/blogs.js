@@ -7,7 +7,7 @@ export const BLOGS = [
     title: "Innovative ideas made by Nolte Küchen",
     subtitle: "From functional to atmospheric",
     excerpt:
-      "Light is more than just illumination – it creates atmosphere and ensures a pleasant ambience in your kitchen. With Nolte Küchen’s diverse lighting options, you can easily enhance your kitchen. Whether functional work light, cosy lighting for a homely flair, or indirect lighting without glare – we have the right solution for every style and budget. Thanks to modern LED technologies, you can flexibly adjust light intensity and colour, from cool to warm white, perfectly matched to any mood. Discover how you can ideally showcase your kitchen with light.",
+      "We are constantly fine-tuning our designs to ensure you receive your own personal dream kitchen. Innovative ideas and a fresh breeze of creativity help us to constantly improve our products. The result: plenty of kitchen features in the best possible quality.",
     content: (
       <>
         <div className="nolte-columns">
