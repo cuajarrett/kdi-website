@@ -5,7 +5,7 @@ export const Card = ({ link, image, title, excerpt, contain = false }) => {
   return (
     <Link
       href={link}
-      className="border shadow flex flex-col items-stretch justify-between transition hover:shadow-xl"
+      className="border shadow flex flex-col items-stretch transition hover:shadow-xl"
     >
       <div className="relative w-full h-48">
         <Image
