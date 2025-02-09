@@ -39,7 +39,7 @@ export default function HomePage() {
                 src={image.desktopSrc}
                 alt={image.alt}
                 loading="eager"
-                className="object-cover object-bottom hidden w-screen h-[50vh] lg:h-[80vh] md:block"
+                className="object-cover object-center hidden w-screen h-[50vh] lg:h-[80vh] md:block"
                 height={1920}
                 width={1080}
               />
@@ -47,7 +47,7 @@ export default function HomePage() {
                 src={image.mobileSrc}
                 alt={image.alt}
                 loading="eager"
-                className="object-cover object-bottom w-screen h-[50vh] lg:h-[80vh] md:hidden"
+                className="object-cover object-center w-screen h-[50vh] lg:h-[80vh] md:hidden"
                 height={1080}
                 width={1920}
               />
