@@ -65,7 +65,7 @@ export const BRANDS = [
   {
     comingSoon: true,
     slug: "caccaro",
-    name: "Caccarro",
+    name: "Caccaro",
     logo: { src: "/logos/Caccaro.png", alt: "Caccaro Logo" },
     description: "Coming Soon",
     catalogue: null,
