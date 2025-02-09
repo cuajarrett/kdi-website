@@ -82,7 +82,7 @@ export default async function BlogDetailPage({ params }) {
           {new Date(blog.publishedAt).toDateString()}
         </p>
 
-        <div className="max-w-lg text-justify mb-4">{blog.excerpt}</div>
+        <div className="text-justify mb-4">{blog.excerpt}</div>
         <div className="prose max-w-none space-y-12">{blog.content}</div>
 
         <div className="text-center mt-6 py-8 space-y-4">
