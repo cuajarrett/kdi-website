@@ -27,7 +27,7 @@ export const HOME = {
     ),
     images: [
       {
-        desktopSrc: "/gallery/Home/Hero_HomePage1_Desktop.jpg",
+        desktopSrc: "/gallery/Home/Hero_HomePage1_Desktop.png",
         mobileSrc: "/gallery/Home/Hero_HomePage1_Mobile.webp",
         alt: "Kassi Distributors Inc. Gallery 1",
       },
