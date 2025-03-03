@@ -5,13 +5,13 @@ export const BRANDS = [
     logo: { src: "/logos/Nolte Kitchen.png", alt: "Nolte Kitchen Logo" },
     description: (
       <>
-        With Nolte Küchen, the kitchen transcends its functional role—it becomes
-        the heart of the home. Recognized as Germany’s favorite kitchen brand,
-        Nolte harmonizes innovation and individuality, offering a broad range of
-        solutions for various lifestyles and budgets. Each Nolte kitchen is{" "}
-        <strong>Made in Germany</strong> with a focus on sustainability and
-        meticulous craftsmanship, creating a warm, inviting space where family
-        and friends naturally come together.
+        With Nolte Philippines, the kitchen goes beyond its functional role—it 
+        becomes the heart of the home. Recognized as Germany’s favorite kitchen 
+        brand, Nolte Küchen seamlessly blends innovation and individuality, offering 
+        tailored solutions for a variety of lifestyles right here in the Philippines. 
+        Each Nolte kitchen is{" "} <strong>Made in Germany</strong> with a focus on
+        sustainability and meticulous craftsmanship, creating a warm, inviting space 
+        where family and friends naturally come together.
       </>
     ),
     catalogue: "/catalogues/NK31168_Kuechen_Journal_2024_GB.pdf",
