@@ -1004,6 +1004,6 @@ export const BLOGS = [
        <p>Drop by to experience these kitchens firsthand and discover why Nolte has been one of Germany’s most popular kitchen brands for over 65 years. Visit us at 7646 Guijo St., San Antonio, Makati, and let us help you bring world-class design into your home!</p>
        <p><a className="font-bold underline" href="https://kanto.ph/spaces/architecture/nolte-philippines-showroom/">Click here to read the full Kanto.ph Article</a></p>
     </>),
-      image: ""
+      image: "https://kanto.ph/wp-content/uploads/2025/02/Nolte-Kuchen-Philippines-Josh-Patrick-Cua-Kassi-Distributors-Kanto.PH-Creative-Corners-36-2048x1366.jpg"
   }
 ];
