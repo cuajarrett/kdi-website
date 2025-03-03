@@ -1004,6 +1004,7 @@ export const BLOGS = [
        <p>The event, titled “_____”, ______</p>
        <p><a className="font-bold underline" href="https://kanto.ph/spaces/architecture/nolte-philippines-showroom/">Read the full story here.</a></p>
        <p>Visit our _____ Showroom at ____, ____, Makati City.</p>
-    </>)
+    </>),
+      image: ""
   }
 ];
