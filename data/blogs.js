@@ -1001,7 +1001,6 @@ export const BLOGS = [
       "At Kassi Distributors, Inc., we believe a well-designed kitchen is more than just a place for cooking—it’s the heart of the home. This philosophy is at the core of Nolte Küchen, Germany’s favorite kitchen brand, brought to life in our new flagship showroom in Makati. We’re excited to share that Kanto has featured our brand-new Nolte Philippines showroom, where each kitchen highlights German precision, timeless aesthetics, and everyday functionality—true hallmarks of the Nolte legacy.",
     content: (
     <>
-       <p>A Kanto Feature: Nolte Philippines Showroom by Josh Cua</p>
        <p>Drop by to experience these kitchens firsthand and discover why Nolte has been one of Germany’s most popular kitchen brands for over 65 years. Visit us at 7646 Guijo St., San Antonio, Makati, and let us help you bring world-class design into your home!</p>
        <p><a className="font-bold underline" href="https://kanto.ph/spaces/architecture/nolte-philippines-showroom/">Click here to read the full Kanto.ph Article</a></p>
     </>),
