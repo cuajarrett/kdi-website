@@ -992,4 +992,18 @@ export const BLOGS = [
     image:
       "https://nolte-prod-ebcwh6b9axcgebb3.z01.azurefd.net/-/jssmedia/project/nolte-jss/corporate-website/produkt-moods/torino_lack/nolte_kchen_torino_lack_lava_1/21to9.jpg?mw=1440&as=0",
   },
+  {
+    slug: "kitchen-conversational-nolte-philippines-with-kanto-ph",
+    publishedAt: "2025-02-25T16:00:00Z",
+    title: "Kitchen Conversational Nolte Philippines with Kanto PH",
+    subtitle: null,
+    excerpt:
+      "We are constantly fine-tuning our designs to ensure you receive your own personal dream kitchen. Innovative ideas and a fresh breeze of creativity help us to constantly improve our products. The result: plenty of kitchen features in the best possible quality.",
+    content: (<>
+       <p>Last 25th February 2025, ______, together with ____, celebrated the newly renovated ____ at _____ with esteemed guests and friends.</p>
+       <p>The event, titled “_____”, ______</p>
+       <p><a href="https://kanto.ph/spaces/architecture/nolte-philippines-showroom/">Read the full story here.</a></p>
+       <p>Visit our _____ Showroom at ____, ____, Makati City.</p>
+    </>)
+  }
 ];
