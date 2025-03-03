@@ -1,7 +1,7 @@
 export const BRANDS = [
   {
     slug: "nolte-kitchen",
-    name: "Nolte Kitchen",
+    name: "Nolte Küchen",
     logo: { src: "/logos/Nolte Kitchen.png", alt: "Nolte Kitchen Logo" },
     description: (
       <>
@@ -36,7 +36,7 @@ export const BRANDS = [
   },
   {
     slug: "express-kitchen",
-    name: "Express Kitchen",
+    name: "Express Küchen",
     logo: { src: "/logos/Express Kitchen.png", alt: "Express Kitchen Logo" },
     description: (
       <>
