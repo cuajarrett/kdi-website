@@ -118,7 +118,7 @@ export const PROJECTS = [
     slug: "nolte-kitchen-two-serendra-project",
     coverImage:
       "/gallery/Projects/Nolte Kitchen Two Serendra Project/01 Main Image.jpg",
-    projectTitle: "Nolte Kitchen Two Serendra Project",
+    projectTitle: "Nolte Küchen: Two Serendra Project",
     brand: BRANDS[0],
     collection: "ARTWOOD | MANHATTAN UNI",
     finish: "22K Walnut Cuba, 490 White",
