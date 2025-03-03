@@ -1002,7 +1002,7 @@ export const BLOGS = [
     content: (<>
        <p>Last 25th February 2025, ______, together with ____, celebrated the newly renovated ____ at _____ with esteemed guests and friends.</p>
        <p>The event, titled “_____”, ______</p>
-       <p><a href="https://kanto.ph/spaces/architecture/nolte-philippines-showroom/">Read the full story here.</a></p>
+       <p><a className="font-bold underline" href="https://kanto.ph/spaces/architecture/nolte-philippines-showroom/">Read the full story here.</a></p>
        <p>Visit our _____ Showroom at ____, ____, Makati City.</p>
     </>)
   }
