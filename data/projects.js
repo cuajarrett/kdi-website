@@ -5,7 +5,7 @@ export const PROJECTS = [
     slug: "express-kitchen-compact-kitchen-display",
     coverImage:
       "/gallery/Projects/Express Kitchen Compact Kitchen Display/01 Main Image.jpg",
-    projectTitle: "Express Kitchen Compact Kitchen Display",
+    projectTitle: "Express Küchen: Compact Kitchen Display",
     brand: BRANDS[1],
     collection: "STAR | PLAN",
     finish: "239 High Gloss Light Grey, 164 Mountain Oak",
@@ -25,7 +25,7 @@ export const PROJECTS = [
     slug: "express-kitchen-utility-room-display",
     coverImage:
       "/gallery/Projects/Express Kitchen Utility Room/01 Main image.jpg",
-    projectTitle: "Express Kitchen Utility Room Display",
+    projectTitle: "Express Küchen: Utility Room Display",
     brand: BRANDS[1],
     collection: "STAR",
     finish: "231 High Gloss White",
@@ -39,7 +39,7 @@ export const PROJECTS = [
     slug: "nolte-kitchen-artline-display",
     coverImage:
       "/gallery/Projects/Nolte Kitchen Artline Display/01 Main Image.jpg",
-    projectTitle: "Nolte Kitchen Artline Display",
+    projectTitle: "Nolte Küchen: Artline Display",
     brand: BRANDS[0],
     collection: "ARTLINE",
     finish: "547 Stripe Wood Coffee",
@@ -59,7 +59,7 @@ export const PROJECTS = [
     slug: "nolte-kitchen-live-kitchen-display",
     coverImage:
       "/gallery/Projects/Nolte Kitchen Live Kitchen Display/01 Main Image.jpg",
-    projectTitle: "Nolte Kitchen Live Kitchen Display",
+    projectTitle: "Nolte Küchen: Live Kitchen Display",
     brand: BRANDS[0],
     collection: "MANHATTAN | PORTLAND",
     finish: "48N Oak Nero | 403 Cement Sapphire Grey",
@@ -79,7 +79,7 @@ export const PROJECTS = [
     slug: "nolte-kitchen-san-isidro-project",
     coverImage:
       "/gallery/Projects/Nolte Kitchen San Isidro Project/01_Main Image.jpg",
-    projectTitle: "Nolte Kitchen San Isidro Project",
+    projectTitle: "Nolte Küchen: San Isidro Project",
     brand: BRANDS[0],
     collection: "TORINO LACK",
     finish: "C08 Sahara",
@@ -99,7 +99,7 @@ export const PROJECTS = [
     slug: "nolte-kitchen-the-enclave-project",
     coverImage:
       "/gallery/Projects/Nolte Kitchen The Enclave Project/01 Main Image.jpg",
-    projectTitle: "Nolte Kitchen The Enclave Project",
+    projectTitle: "Nolte Küchen: The Enclave Project",
     brand: BRANDS[0],
     collection: "SOFT LACK",
     finish: "76B Blueberry",
