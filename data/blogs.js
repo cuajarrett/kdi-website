@@ -10,23 +10,6 @@ export const BLOGS = [
       "We are constantly fine-tuning our designs to ensure you receive your own personal dream kitchen. Innovative ideas and a fresh breeze of creativity help us to constantly improve our products. The result: plenty of kitchen features in the best possible quality.",
     content: (
       <>
-        <div className="nolte-columns">
-          <div className="column">
-            <div className="editorial-headline-wrapper">
-              <h2 className="text-4xl font-bold">
-                Innovative ideas made by Nolte Küchen
-              </h2>
-            </div>
-            <div className="editorial-text-multi-line-wrapper">
-              <div className="editorial-text-multi-line">
-                We are constantly fine-tuning our designs to ensure you receive
-                your own personal dream kitchen. Innovative ideas and a fresh
-                breeze of creativity help us to constantly improve our products.
-                The result: plenty of kitchen features in the best possible
-                quality.
-              </div>
-            </div>
-          </div>
         </div>
         <div className="flex gap-4 items-center flex-col sm:flex-row">
           <div className="flex-1">
