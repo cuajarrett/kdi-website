@@ -86,9 +86,9 @@ export default async function BlogDetailPage({ params }) {
         <div className="prose max-w-none space-y-12">{blog.content}</div>
 
         <div className="text-center mt-6 py-8 space-y-4">
-          <h2 className={title()}>Inspired by this design?</h2>
+          <h2 className={title()}>Want to Learn More?</h2>
           <p>
-            Let’s bring it to life. Our team is ready to help you create a space
+            Our team is ready to help you create a space
             that reflects your vision.
           </p>
           <Button
