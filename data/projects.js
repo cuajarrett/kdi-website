@@ -160,4 +160,27 @@ export const PROJECTS = [
       "gallery/Projects/Nolte Kitchen Westgrove Heights Project/LHB06427.jpg",
     ],
   },
+  {
+    slug: "nolte-kitchen-mt-malarayat-project",
+    coverImage:
+      "gallery/Projects/Nolte Kitchen Mt Malarayat Project/01 Main Image.jpg",
+    projectTitle: "Nolte Küchen: Mt Malarayat Project",
+    brand: BRANDS[0],
+    collection: "GLAS TEC SATIN",
+    finish: "17W White",
+    location: "Lipa, Batangas",
+    gallery: [
+      "gallery/Projects/Nolte Kitchen Mt Malarayat Project/HAB00464-HDR.jpg",
+      "gallery/Projects/Nolte Kitchen Mt Malarayat Project/HAB00491-HDR.jpg",
+      "gallery/Projects/Nolte Kitchen Mt Malarayat Project/HAB00545-HDR.jpg",
+      "gallery/Projects/Nolte Kitchen Mt Malarayat Project/HAB00581-HDR.jpg",
+      "gallery/Projects/Nolte Kitchen Mt Malarayat Project/LHB07042.jpg",
+      "gallery/Projects/Nolte Kitchen Mt Malarayat Project/LHB07084.jpg",
+      "gallery/Projects/Nolte Kitchen Mt Malarayat Project/LHB07105.jpg",
+      "gallery/Projects/Nolte Kitchen Mt Malarayat Project/LHB07211.jpg",
+      "gallery/Projects/Nolte Kitchen Mt Malarayat Project/LHB07237.jpg",
+      "gallery/Projects/Nolte Kitchen Mt Malarayat Project/LHB07301.jpg",
+      "gallery/Projects/Nolte Kitchen Mt Malarayat Project/LHB07335.jpg",
+    ],
+  },
 ];
