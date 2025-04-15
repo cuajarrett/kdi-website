@@ -146,7 +146,7 @@ export const PROJECTS = [
     gallery: [
       "gallery/Projects/Nolte Kitchen Westgrove Heights Project/HAB07487-HDR.jpg",
       "gallery/Projects/Nolte Kitchen Westgrove Heights Project/HAB07775-HDR.jpg",
-      "gallery/Projects/Nolte Kitchen Westgrove Heights Project/IMG_0890.jpg",
+      "gallery/Projects/Nolte Kitchen Westgrove Heights Project/3rd.jpg",
       "gallery/Projects/Nolte Kitchen Westgrove Heights Project/LHB06252.jpg",
       "gallery/Projects/Nolte Kitchen Westgrove Heights Project/LHB06259.jpg",
       "gallery/Projects/Nolte Kitchen Westgrove Heights Project/LHB06260.jpg",
