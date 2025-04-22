@@ -64,9 +64,9 @@ export const BRANDS = [
   },
   {
     comingSoon: true,
-    slug: "caccaro",
-    name: "Caccaro",
-    logo: { src: "/logos/Caccaro.png", alt: "Caccaro Logo" },
+    slug: "nolte-mobel",
+    name: "Nolte Möbel",
+    logo: { src: "/logos/Nolte Mobel.png", alt: "Nolte Mobel Logo" },
     description: "Coming Soon",
     catalogue: null,
     gallery: [],
