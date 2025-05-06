@@ -34,7 +34,7 @@ export const FOOTER = {
   contactInformation: {
     email: "info@kassidinc.com",
     telephone: "+63 2 8807 5238",
-    phone: "+63 966 806 8999",
+    
   },
   socialLinks: [
     {
