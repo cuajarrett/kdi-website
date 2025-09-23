@@ -11,14 +11,14 @@ export const BLOGS = [
     content: (
       <>
         <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <div className="flex-1">
-            <Image
-              img src="https://www.nolte-kuechen.com/.imaging/focalpoint/10x5/100/dam/jcr:46ea2ac0-8667-4b69-a180-e70fbc636a42/Nolte_Kchen_Torino_Lack_Lava_1.jpg"
-              alt="32% mehr Stauraum"
-              sizes="(min-width: 1024px) 1024px, (min-width: 768px) 500px, 100vw"
-              loading="lazy"
-              width="7360"
-              height="4912"
+        <div className="flex-1">
+          <Image
+            src="https://www.nolte-kuechen.com/.imaging/focalpoint/10x5/100/dam/jcr:46ea2ac0-8667-4b69-a180-e70fbc636a42/Nolte_Kchen_Torino_Lack_Lava_1.jpg"
+            alt="32% mehr Stauraum"
+            sizes="(min-width: 1024px) 1024px, (min-width: 768px) 500px, 100vw"
+            loading="lazy"
+            width={7360}
+            height={4912}
             />
           </div>
           <div className="flex-1">
