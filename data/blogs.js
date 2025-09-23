@@ -13,7 +13,7 @@ export const BLOGS = [
         <div className="flex gap-4 items-center flex-col sm:flex-row">
           <div className="flex-1">
             <Image
-              src="https://nolte-prod-ebcwh6b9axcgebb3.z01.azurefd.net/-/jssmedia/project/nolte-jss/corporate-website/produkt-moods/lux/nolte_kchen_lux_quarzgrau_11/3to2.jpg?mw=1440&amp;as=0"
+              src="https://www.nolte-kuechen.com/.imaging/focalpoint/10x5/100/dam/jcr:46ea2ac0-8667-4b69-a180-e70fbc636a42/Nolte_Kchen_Torino_Lack_Lava_1.jpg"
               alt="32% mehr Stauraum"
               sizes="(min-width: 1024px) 1024px, (min-width: 768px) 500px, 100vw"
               loading="lazy"
