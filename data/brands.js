@@ -66,7 +66,7 @@ export const BRANDS = [
     comingSoon: true,
     slug: "nolte-neo",
     name: "Nolte NEO",
-    logo: { src: "/logos/Nolte Mobel.png", alt: "Nolte Mobel Logo" },
+    logo: { src: "/logos/nolte_neo_Logo_Positiv.png", alt: "Nolte NEO Logo" },
     description: "Coming Soon",
     catalogue: null,
     gallery: [],
