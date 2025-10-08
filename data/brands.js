@@ -37,7 +37,7 @@ export const BRANDS = [
   {
     slug: "express-kitchen",
     name: "Express Küchen",
-    logo: { src: "/logos/Express Kitchen.png", alt: "Express Kitchen Logo" },
+    logo: { src: "/logos/express-kuechen-logo.svg", alt: "Express Kitchen Logo" },
     description: (
       <>
         A member of the Nolte Group, Express Küchen presents a dynamic and
@@ -64,8 +64,8 @@ export const BRANDS = [
   },
   {
     comingSoon: true,
-    slug: "nolte-mobel",
-    name: "Nolte Möbel",
+    slug: "nolte-neo",
+    name: "Nolte NEO",
     logo: { src: "/logos/Nolte Mobel.png", alt: "Nolte Mobel Logo" },
     description: "Coming Soon",
     catalogue: null,
