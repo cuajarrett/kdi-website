@@ -47,13 +47,14 @@ export default function AboutPage() {
 
   return (
     <>
+
       {/* About Section */}
-      <section className="text-center space-y-6 py-12 sm:py-16 lg:py-20 xl:py-24">
+      {/* <section className="text-center space-y-6 py-12 sm:py-16 lg:py-20 xl:py-24">
         <h1 className={title()}>{aboutSection.title}</h1>
         <div className="text-base text-justify space-y-4 text-gray-600 sm:text-center">
           {aboutSection.description}
         </div>
-      </section>
+      </section> */}
 
       {/* Services Section */}
       <section className="text-center space-y-6 py-12 sm:py-16 lg:py-20 xl:py-24">
