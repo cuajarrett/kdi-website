@@ -1,15 +1,17 @@
-import { BLOGS, BRANDS } from "@/data";
+import { BLOGS, BRANDS, PROJECTS } from "@/data";
 
 export default function sitemap() {
   const BASE_URL = process.env.DOMAIN_URL;
 
   // Static routes
   const staticRoutes = [
-    { route: "", changeFrequency: "weekly", priority: 0.8 },
+    { route: "", changeFrequency: "weekly", priority: 1.0 },
     { route: "about", changeFrequency: "yearly", priority: 0.6 },
     { route: "blogs", changeFrequency: "monthly", priority: 0.6 },
+    { route: "brands", changeFrequency: "monthly", priority: 0.7 },
+    { route: "projects", changeFrequency: "monthly", priority: 0.7 },
     { route: "contact", changeFrequency: "yearly", priority: 0.6 },
-    { route: "showroom", changeFrequency: "monthly", priority: 0.6 },
+    { route: "showroom", changeFrequency: "monthly", priority: 0.7 },
   ].map(({ route, changeFrequency, priority }) => ({
     url: `${BASE_URL}/${route}`,
     lastModified: new Date().toISOString(),
@@ -33,6 +35,14 @@ export default function sitemap() {
     priority: 0.6,
   }));
 
+  // Project routes
+  const projectRoutes = PROJECTS.map((project) => ({
+    url: `${BASE_URL}/projects/${project.slug}`,
+    lastModified: new Date().toISOString(),
+    changeFrequency: "monthly",
+    priority: 0.6,
+  }));
+
   // Combine all routes
-  return [...staticRoutes, ...blogRoutes, ...brandRoutes];
+  return [...staticRoutes, ...blogRoutes, ...brandRoutes, ...projectRoutes];
 }

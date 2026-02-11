@@ -3,6 +3,8 @@ export const BRANDS = [
     slug: "nolte-kitchen",
     name: "Nolte Küchen",
     logo: { src: "/logos/Nolte Kitchen.png", alt: "Nolte Kitchen Logo" },
+    metaDescription:
+      "Germany's favorite kitchen brand. Nolte Küchen offers innovative, individually tailored kitchen solutions Made in Germany, available in the Philippines through Kassi Distributors Inc.",
     description: (
       <>
         With Nolte Philippines, the kitchen goes beyond its functional role—it 
@@ -38,6 +40,8 @@ export const BRANDS = [
     slug: "express-kitchen",
     name: "Express Küchen",
     logo: { src: "/logos/express-kuechen-logo.svg", alt: "Express Kitchen Logo" },
+    metaDescription:
+      "A member of the Nolte Group, Express Küchen delivers affordable, modern German kitchen designs that blend contemporary style with straightforward functionality.",
     description: (
       <>
         A member of the Nolte Group, Express Küchen presents a dynamic and
@@ -67,6 +71,8 @@ export const BRANDS = [
     slug: "nolte-neo",
     name: "Nolte NEO",
     logo: { src: "/logos/nolte_neo_Logo_Positiv.png", alt: "Nolte NEO Logo" },
+    metaDescription:
+      "Nolte NEO — Coming soon to the Philippines through Kassi Distributors Inc.",
     description: "Coming Soon",
     catalogue: null,
     gallery: [],

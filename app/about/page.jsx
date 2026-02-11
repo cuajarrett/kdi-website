@@ -5,11 +5,11 @@ import { ABOUT } from "@/data";
 
 export async function generateMetadata() {
   return {
-    title: "About Us | Kassi Distributors Inc.",
+    title: "About Us",
     description:
       "Discover Kassi Distributors Inc.—bridging global excellence with local aspirations. Learn about our history, mission, and commitment to design innovation.",
     openGraph: {
-      title: "About Us | Kassi Distributors Inc.",
+      title: "About Us",
       description:
         "Discover Kassi Distributors Inc.—bridging global excellence with local aspirations. Learn about our history, mission, and commitment to design innovation.",
       url: "https://kassidinc.com/about",
@@ -26,7 +26,7 @@ export async function generateMetadata() {
     },
     twitter: {
       card: "summary_large_image",
-      title: "About Us | Kassi Distributors Inc.",
+      title: "About Us",
       description:
         "Discover Kassi Distributors Inc.—bridging global excellence with local aspirations. Learn about our history, mission, and commitment to design innovation.",
       images: ["/gallery/About/History 3_Current.webp"],
@@ -122,9 +122,9 @@ export default function AboutPage() {
                     fill
                   />
                 </div>
-                <h4 className="mt-2 text-base text-gray-700 text-justify">
+                <p className="mt-2 text-base text-gray-700 text-justify">
                   {description}
-                </h4>
+                </p>
               </div>
             </li>
           ))}

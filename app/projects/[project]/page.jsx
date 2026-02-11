@@ -16,18 +16,38 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }) {
   const { project } = await params;
   const projectData = PROJECTS.find((p) => p.slug === project);
-  if (!projectData) return notFound();
+  if (!projectData) {
+    return { title: "Project Not Found" };
+  }
+
+  const description = `${projectData.projectTitle} located at ${projectData.location}. Features a ${projectData.finish} finish from the ${projectData.collection} collection.`;
 
   return {
-    title: `${projectData.projectTitle} | Explore ${projectData.projectTitle} Products & Designs`,
-    description: `${projectData.projectTitle} located at ${projectData.location}. Has a ${projectData.finish} finish and comes from the ${projectData.collection} collection.`,
+    title: projectData.projectTitle,
+    description,
     openGraph: {
-      title: `${projectData.projectTitle}`,
-      description: `${projectData.projectTitle} located at ${projectData.location}. Has a ${projectData.finish} finish and comes from the ${projectData.collection} collection.`,
+      title: projectData.projectTitle,
+      description,
       url: `https://kassidinc.com/projects/${projectData.slug}`,
       siteName: "Kassi Distributors Inc.",
-      images: [projectData.coverImage],
+      images: [
+        {
+          url: projectData.coverImage,
+          width: 1200,
+          height: 630,
+          alt: projectData.projectTitle,
+        },
+      ],
       type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: projectData.projectTitle,
+      description,
+      images: [projectData.coverImage],
+    },
+    alternates: {
+      canonical: `https://kassidinc.com/projects/${projectData.slug}`,
     },
   };
 }
@@ -68,10 +88,42 @@ export default async function ProjectItemPage({ params }) {
     gallery,
   } = projectData;
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://kassidinc.com",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Projects",
+        item: "https://kassidinc.com/projects",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: projectTitle,
+        item: `https://kassidinc.com/projects/${projectData.slug}`,
+      },
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
+        }}
+      />
       <Image
         src={coverImage}
+        alt={projectTitle}
         width={1280}
         height={600}
         className="object-cover w-screen h-[40vh] sm:h-[80vh]"

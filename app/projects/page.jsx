@@ -4,6 +4,38 @@ import Link from "next/link";
 import { title } from "@/components/primitives";
 import { PROJECTS } from "@/data";
 
+export const metadata = {
+  title: "Our Projects",
+  description:
+    "Browse completed kitchen and home projects by Kassi Distributors Inc. featuring Nolte Küchen and Express Küchen installations in the Philippines.",
+  openGraph: {
+    title: "Our Projects",
+    description:
+      "Browse completed kitchen and home projects by Kassi Distributors Inc. featuring Nolte Küchen and Express Küchen installations in the Philippines.",
+    url: "https://kassidinc.com/projects",
+    siteName: "Kassi Distributors Inc.",
+    images: [
+      {
+        url: "/gallery/Home/Hero_HomePage1_Desktop.webp",
+        width: 1200,
+        height: 630,
+        alt: "Kassi Distributors Inc. Projects",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Our Projects",
+    description:
+      "Browse completed kitchen and home projects by Kassi Distributors Inc. featuring Nolte Küchen and Express Küchen installations in the Philippines.",
+    images: ["/gallery/Home/Hero_HomePage1_Desktop.webp"],
+  },
+  alternates: {
+    canonical: "https://kassidinc.com/projects",
+  },
+};
+
 export default function BrandsListPage() {
   return (
     <div className="mx-auto max-w-7xl py-8 px-6 flex-grow min-h-[60vh]">

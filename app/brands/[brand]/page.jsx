@@ -16,18 +16,34 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }) {
   const { brand } = await params;
   const brandData = BRANDS.find((b) => b.slug === brand);
-  if (!brandData) return notFound();
+  if (!brandData) {
+    return { title: "Brand Not Found" };
+  }
 
   return {
-    title: `${brandData.name} | Explore ${brandData.name} Products & Designs`,
-    description: brandData.description,
+    title: `${brandData.name} - Products & Designs`,
+    description: brandData.metaDescription,
     openGraph: {
-      title: `${brandData.name}`,
-      description: brandData.description,
+      title: brandData.name,
+      description: brandData.metaDescription,
       url: `https://kassidinc.com/brands/${brandData.slug}`,
       siteName: "Kassi Distributors Inc.",
-      images: [brandData.logo.src],
+      images: [
+        {
+          url: brandData.logo.src,
+          alt: brandData.logo.alt,
+        },
+      ],
       type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: brandData.name,
+      description: brandData.metaDescription,
+      images: [brandData.logo.src],
+    },
+    alternates: {
+      canonical: `https://kassidinc.com/brands/${brandData.slug}`,
     },
   };
 }
@@ -60,8 +76,39 @@ export default async function BrandItemPage({ params }) {
 
   const { name, logo, description, catalogue, comingSoon, gallery } = brandData;
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://kassidinc.com",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Brands",
+        item: "https://kassidinc.com/brands",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: name,
+        item: `https://kassidinc.com/brands/${brandData.slug}`,
+      },
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
+        }}
+      />
       {/* Hero Section */}
       {!comingSoon ? (
         <section className="flex justify-center items-center p-4 relative bg-gray-100 flex-col lg:gap-8 lg:flex-row sm:p-12">
@@ -74,7 +121,7 @@ export default async function BrandItemPage({ params }) {
             />
           </div>
           <div className="flex flex-col text-center sm:text-left">
-            <h3 className="text-3xl font-bold">{name}</h3>
+            <h1 className="text-3xl font-bold">{name}</h1>
             <p className="text-sm text-gray-700 mb-4 text-justify sm:text-lg">
               {description}
             </p>

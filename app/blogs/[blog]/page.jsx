@@ -10,34 +10,36 @@ import clsx from "clsx";
 export async function generateMetadata({ params }) {
   const p = await params;
   const blog = BLOGS.find((b) => b.slug === p.blog);
-  if (!blog)
-    return (
-      <div className="flex flex-col items-center justify-center min-h-[40vh] px-4">
-        <div className="max-w-md text-center bg-white p-8 shadow-lg rounded-lg">
-          <h1 className="text-3xl font-bold text-gray-800 mb-4">
-            Blog Not Found
-          </h1>
-          <p className="text-gray-600 mb-6">
-            Oops! The blog you're looking for doesn't exist or might have been
-            removed. Don't worry, there's more to explore!
-          </p>
-          <Button color="primary" className="w-full" as={Link} href="/blogs">
-            Back to Blogs
-          </Button>
-        </div>
-      </div>
-    );
+  if (!blog) {
+    return { title: "Blog Not Found" };
+  }
 
   return {
-    title: `${blog.title} | Kassi Blog`,
+    title: blog.title,
     description: blog.excerpt,
     openGraph: {
-      title: `${blog.title} | Kassi Blog`,
+      title: blog.title,
       description: blog.excerpt,
       url: `https://kassidinc.com/blogs/${blog.slug}`,
       siteName: "Kassi Distributors Inc.",
-      images: [blog.image],
+      images: [
+        {
+          url: blog.image,
+          width: 1200,
+          height: 630,
+          alt: blog.title,
+        },
+      ],
       type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: blog.title,
+      description: blog.excerpt,
+      images: [blog.image],
+    },
+    alternates: {
+      canonical: `https://kassidinc.com/blogs/${blog.slug}`,
     },
   };
 }
@@ -65,8 +67,65 @@ export default async function BlogDetailPage({ params }) {
     );
   }
 
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: blog.title,
+    description: blog.excerpt,
+    image: `https://kassidinc.com${blog.image}`,
+    datePublished: blog.publishedAt,
+    author: {
+      "@type": "Organization",
+      name: "Kassi Distributors Inc.",
+      url: "https://kassidinc.com",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Kassi Distributors Inc.",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://kassidinc.com/logos/KDI Official Logo Files_KDI Official Logo.png",
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://kassidinc.com/blogs/${blog.slug}`,
+    },
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://kassidinc.com",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Blogs",
+        item: "https://kassidinc.com/blogs",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: blog.title,
+        item: `https://kassidinc.com/blogs/${blog.slug}`,
+      },
+    ],
+  };
+
   return (
     <article>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([articleSchema, breadcrumbSchema]),
+        }}
+      />
       <div className="relative w-screen h-[75vh] mb-6">
         <Image
           src={blog.image}

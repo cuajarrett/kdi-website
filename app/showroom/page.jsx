@@ -6,18 +6,18 @@ import Gallery from "@/components/gallery";
 
 export async function generateMetadata() {
   return {
-    title: "Our Showrooms | Kassi Distributors Inc.",
+    title: "Our Showrooms",
     description:
       "Explore Kassi Distributors Inc.'s premium showrooms. Visit our locations, view our elegant interiors, and find the perfect home solutions tailored for you.",
     openGraph: {
-      title: "Our Showrooms | Kassi Distributors Inc.",
+      title: "Our Showrooms",
       description:
         "Explore Kassi Distributors Inc.'s premium showrooms. Visit our locations, view our elegant interiors, and find the perfect home solutions tailored for you.",
       url: "https://kassidinc.com/showroom",
       siteName: "Kassi Distributors Inc.",
       images: [
         {
-          url: "/gallery/Showroom/image1.webp", // Update to the best image for SEO
+          url: "/gallery/Showroom/image1.webp",
           width: 1200,
           height: 630,
           alt: "Kassi Distributors Inc. Showroom",
@@ -27,7 +27,7 @@ export async function generateMetadata() {
     },
     twitter: {
       card: "summary_large_image",
-      title: "Our Showrooms | Kassi Distributors Inc.",
+      title: "Our Showrooms",
       description:
         "Explore Kassi Distributors Inc.'s premium showrooms. Visit our locations, view our elegant interiors, and find the perfect home solutions tailored for you.",
       images: ["/gallery/Showroom/image1.webp"],
@@ -41,8 +41,51 @@ export async function generateMetadata() {
 export default function ShowroomPage() {
   const { writeUp, showroomAddresses, gallery } = SHOWROOM;
 
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "HomeGoodsStore",
+    name: "Kassi Distributors Inc. - Main Showroom",
+    description:
+      "Premium showroom featuring Nolte Küchen and Express Küchen kitchen solutions for Filipino homes.",
+    url: "https://kassidinc.com/showroom",
+    telephone: "+63 2 8807 5238",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "7646 Guijo Street, San Antonio Village",
+      addressLocality: "Makati",
+      addressRegion: "Metro Manila",
+      postalCode: "1203",
+      addressCountry: "PH",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 14.564995,
+      longitude: 121.012248,
+    },
+    openingHoursSpecification: {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ],
+      opens: "09:00",
+      closes: "18:00",
+    },
+    image: "https://kassidinc.com/gallery/Showroom/image1.webp",
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(localBusinessSchema),
+        }}
+      />
       {/* Header */}
       <h1 className={title()}>Our Showrooms</h1>
 

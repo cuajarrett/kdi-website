@@ -60,7 +60,7 @@ export default function HomePage() {
       <section className="mx-auto max-w-7xl py-8 px-6 bg-white text-center">
         <div className="container mx-auto space-y-4">
           <div>
-            <h2 className={title()}>{heroSection.heading}</h2>
+            <h1 className={title()}>{heroSection.heading}</h1>
             <p className={subtitle()}>{heroSection.subheading}</p>
           </div>
           <div className="space-y-2 text-sm text-justify sm:text-md sm:text-center">
