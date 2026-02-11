@@ -1,5 +1,15 @@
 import nodemailer from "nodemailer";
 
+function escapeHtml(str) {
+  if (!str) return "";
+  return String(str)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
 export async function POST(req) {
   const body = await req.json();
 
@@ -45,29 +55,37 @@ export async function POST(req) {
     },
   });
 
+  const safeName = escapeHtml(name);
+  const safeEmail = escapeHtml(email);
+  const safePhone = escapeHtml(phone);
+  const safeProjectAddress = escapeHtml(projectAddress);
+  const safeInquiry = escapeHtml(inquiry);
+  const safeShowroom = escapeHtml(showroom);
+  const safeMessage = escapeHtml(message);
+
   try {
     // Send email
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
       to: process.env.EMAIL_USER, // Send email to the support team
       replyTo: email, // Customer's email for direct reply
-      subject: `New Inquiry: ${inquiry} - ${showroom} - From ${name}`,
+      subject: `New Inquiry: ${safeInquiry} - ${safeShowroom} - From ${safeName}`,
       html: `
         <h1>New Inquiry from Potential Client</h1>
         <p><strong>Client Details:</strong></p>
         <ul>
-          <li><strong>Name:</strong> ${name}</li>
-          <li><strong>Email:</strong> ${email}</li>
-          <li><strong>Phone:</strong> ${phone || "N/A"}</li>
+          <li><strong>Name:</strong> ${safeName}</li>
+          <li><strong>Email:</strong> ${safeEmail}</li>
+          <li><strong>Phone:</strong> ${safePhone || "N/A"}</li>
         </ul>
         <p><strong>Project Details:</strong></p>
         <ul>
-          <li><strong>Project Address:</strong> ${projectAddress || "N/A"}</li>
-          <li><strong>Inquiry About:</strong> ${inquiry}</li>
-          <li><strong>Showroom:</strong> ${showroom}</li>
+          <li><strong>Project Address:</strong> ${safeProjectAddress || "N/A"}</li>
+          <li><strong>Inquiry About:</strong> ${safeInquiry}</li>
+          <li><strong>Showroom:</strong> ${safeShowroom}</li>
         </ul>
         <p><strong>Message:</strong></p>
-        <p>${message}</p>
+        <p>${safeMessage}</p>
         <hr />
         <p>
           <em>This email was automatically generated from the contact form on your
