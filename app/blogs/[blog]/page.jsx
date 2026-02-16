@@ -14,14 +14,25 @@ export async function generateMetadata({ params }) {
     return { title: "Blog Not Found" };
   }
 
+  const description = blog.excerpt.length > 160
+    ? blog.excerpt.substring(0, 157) + "..."
+    : blog.excerpt;
+
   return {
     title: blog.title,
-    description: blog.excerpt,
+    description,
+    keywords: [
+      "kitchen design",
+      "Nolte Küchen",
+      blog.title,
+      "kitchen tips Philippines",
+    ],
     openGraph: {
       title: blog.title,
-      description: blog.excerpt,
+      description,
       url: `https://kassidinc.com/blogs/${blog.slug}`,
       siteName: "Kassi Distributors Inc.",
+      locale: "en_PH",
       images: [
         {
           url: blog.image,
@@ -31,11 +42,15 @@ export async function generateMetadata({ params }) {
         },
       ],
       type: "article",
+      publishedTime: blog.publishedAt,
+      modifiedTime: blog.updatedAt || blog.publishedAt,
+      authors: ["Kassi Distributors Inc."],
+      section: "Kitchen Design",
     },
     twitter: {
       card: "summary_large_image",
       title: blog.title,
-      description: blog.excerpt,
+      description,
       images: [blog.image],
     },
     alternates: {
@@ -74,6 +89,7 @@ export default async function BlogDetailPage({ params }) {
     description: blog.excerpt,
     image: `https://kassidinc.com${blog.image}`,
     datePublished: blog.publishedAt,
+    dateModified: blog.updatedAt || blog.publishedAt,
     author: {
       "@type": "Organization",
       name: "Kassi Distributors Inc.",
@@ -136,7 +152,7 @@ export default async function BlogDetailPage({ params }) {
       </div>
       <div className="text-base mx-auto max-w-7xl py-8 px-6 flex-grow">
         <h1 className={clsx(title(), "max-w-sm")}>{blog.title}</h1>
-        {blog.subtitle && <h3 className={subtitle()}>{blog.subtitle}</h3>}
+        {blog.subtitle && <h2 className={subtitle()}>{blog.subtitle}</h2>}
         <p className="text-sm text-gray-500 mb-4">
           {new Date(blog.publishedAt).toDateString()}
         </p>

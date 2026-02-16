@@ -20,29 +20,37 @@ export async function generateMetadata({ params }) {
     return { title: "Project Not Found" };
   }
 
-  const description = `${projectData.projectTitle} located at ${projectData.location}. Features a ${projectData.finish} finish from the ${projectData.collection} collection.`;
+  const description = `${projectData.projectTitle} at ${projectData.location}. Featuring ${projectData.finish} finish from the ${projectData.collection} collection by ${projectData.brand.name}.`;
 
   return {
-    title: projectData.projectTitle,
+    title: `${projectData.projectTitle} — ${projectData.brand.name} Kitchen Project`,
     description,
+    keywords: [
+      projectData.brand.name,
+      projectData.collection,
+      "kitchen project Philippines",
+      "kitchen installation",
+      projectData.location,
+    ],
     openGraph: {
-      title: projectData.projectTitle,
+      title: `${projectData.projectTitle} — ${projectData.brand.name} Kitchen Project`,
       description,
       url: `https://kassidinc.com/projects/${projectData.slug}`,
       siteName: "Kassi Distributors Inc.",
+      locale: "en_PH",
       images: [
         {
           url: projectData.coverImage,
           width: 1200,
           height: 630,
-          alt: projectData.projectTitle,
+          alt: `${projectData.projectTitle} — kitchen project by Kassi Distributors Inc.`,
         },
       ],
       type: "website",
     },
     twitter: {
       card: "summary_large_image",
-      title: projectData.projectTitle,
+      title: `${projectData.projectTitle} — ${projectData.brand.name} Kitchen Project`,
       description,
       images: [projectData.coverImage],
     },
@@ -88,6 +96,15 @@ export default async function ProjectItemPage({ params }) {
     gallery,
   } = projectData;
 
+  const imageGallerySchema = {
+    "@context": "https://schema.org",
+    "@type": "ImageGallery",
+    name: projectTitle,
+    description: `${projectTitle} — ${collection} collection with ${finish} finish, located at ${location}.`,
+    url: `https://kassidinc.com/projects/${projectData.slug}`,
+    image: [coverImage, ...gallery].map((src) => `https://kassidinc.com${src}`),
+  };
+
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -118,7 +135,7 @@ export default async function ProjectItemPage({ params }) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbSchema),
+          __html: JSON.stringify([imageGallerySchema, breadcrumbSchema]),
         }}
       />
       <Image
@@ -130,33 +147,25 @@ export default async function ProjectItemPage({ params }) {
       />
       <div className="mx-auto max-w-7xl py-8">
         <h1 className={title()}>{projectTitle}</h1>
-        <table>
-          <tr>
-            <td className="p-2 font-bold">Brand:</td>
-            <td className="p-2">
-              <Link href={`/brands/${brand.slug}`}>
-                <Image
-                  src={brand.logo.src}
-                  alt={brand.logo.alt}
-                  width={100}
-                  height={50}
-                />
-              </Link>
-            </td>
-          </tr>
-          <tr>
-            <td className="p-2 font-bold">Collection:</td>
-            <td className="p-2">{collection}</td>
-          </tr>
-          <tr>
-            <td className="p-2 font-bold">Finish:</td>
-            <td className="p-2">{finish}</td>
-          </tr>
-          <tr>
-            <td className="p-2 font-bold">Location:</td>
-            <td className="p-2">{location}</td>
-          </tr>
-        </table>
+        <dl className="mt-4 grid grid-cols-[auto_1fr] gap-x-4 gap-y-2">
+          <dt className="p-2 font-bold">Brand:</dt>
+          <dd className="p-2">
+            <Link href={`/brands/${brand.slug}`}>
+              <Image
+                src={brand.logo.src}
+                alt={brand.logo.alt}
+                width={100}
+                height={50}
+              />
+            </Link>
+          </dd>
+          <dt className="p-2 font-bold">Collection:</dt>
+          <dd className="p-2">{collection}</dd>
+          <dt className="p-2 font-bold">Finish:</dt>
+          <dd className="p-2">{finish}</dd>
+          <dt className="p-2 font-bold">Location:</dt>
+          <dd className="p-2">{location}</dd>
+        </dl>
         {/* Gallery Section */}
         {gallery.length > 0 && (
           <section className="mt-10 bg-white">

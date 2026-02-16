@@ -85,6 +85,7 @@ export default function HomePage() {
                 title={name}
                 excerpt={description}
                 contain
+                headingLevel="h3"
               />
             ))}
           </div>
@@ -147,6 +148,7 @@ export default function HomePage() {
                     image={image}
                     title={title}
                     excerpt={excerpt}
+                    headingLevel="h3"
                   />
                 ))}
             </div>

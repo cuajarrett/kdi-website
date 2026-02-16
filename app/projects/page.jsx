@@ -5,30 +5,38 @@ import { title } from "@/components/primitives";
 import { PROJECTS } from "@/data";
 
 export const metadata = {
-  title: "Our Projects",
+  title: "Our Projects — Kitchen Installations & Showroom Displays",
   description:
-    "Browse completed kitchen and home projects by Kassi Distributors Inc. featuring Nolte Küchen and Express Küchen installations in the Philippines.",
+    "See completed Nolte Küchen and Express Küchen kitchen projects by Kassi Distributors Inc. Browse real installations, showroom displays, and design inspiration in the Philippines.",
+  keywords: [
+    "kitchen projects Philippines",
+    "Nolte kitchen installations",
+    "Express kitchen display",
+    "kitchen design portfolio",
+    "completed kitchen projects",
+  ],
   openGraph: {
-    title: "Our Projects",
+    title: "Our Projects — Kitchen Installations & Showroom Displays",
     description:
-      "Browse completed kitchen and home projects by Kassi Distributors Inc. featuring Nolte Küchen and Express Küchen installations in the Philippines.",
+      "See completed Nolte Küchen and Express Küchen kitchen projects by Kassi Distributors Inc. Browse real installations, showroom displays, and design inspiration in the Philippines.",
     url: "https://kassidinc.com/projects",
     siteName: "Kassi Distributors Inc.",
+    locale: "en_PH",
     images: [
       {
         url: "/gallery/Home/Hero_HomePage1_Desktop.webp",
         width: 1200,
         height: 630,
-        alt: "Kassi Distributors Inc. Projects",
+        alt: "Kitchen installation projects by Kassi Distributors Inc.",
       },
     ],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Our Projects",
+    title: "Our Projects — Kitchen Installations & Showroom Displays",
     description:
-      "Browse completed kitchen and home projects by Kassi Distributors Inc. featuring Nolte Küchen and Express Küchen installations in the Philippines.",
+      "See completed Nolte Küchen and Express Küchen kitchen projects by Kassi Distributors Inc. Browse real installations, showroom displays, and design inspiration in the Philippines.",
     images: ["/gallery/Home/Hero_HomePage1_Desktop.webp"],
   },
   alternates: {

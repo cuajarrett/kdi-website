@@ -17,35 +17,61 @@ export const metadata = {
   metadataBase: new URL("https://kassidinc.com"),
   title: {
     default:
-      "Kassi Distributors Inc. | Premium International Home Brands for Filipino Homes",
+      "Kassi Distributors Inc. | Premium German Kitchen Brands in the Philippines",
     template: "%s | Kassi Distributors Inc.",
   },
   description:
-    "Discover how Kassi Distributors Inc. bridges global excellence with local aspirations, curating the finest international brands for Filipino homes.",
+    "Official Philippine distributor of Nolte Küchen and Express Küchen. Explore premium German kitchen designs, visit our Makati showroom, and transform your home.",
+  keywords: [
+    "Kassi Distributors",
+    "Nolte Küchen Philippines",
+    "Express Küchen Philippines",
+    "German kitchen Philippines",
+    "premium kitchen brands",
+    "kitchen design Makati",
+    "imported kitchen cabinets",
+    "modern kitchen Philippines",
+  ],
+  authors: [{ name: "Kassi Distributors Inc.", url: "https://kassidinc.com" }],
+  creator: "Kassi Distributors Inc.",
+  publisher: "Kassi Distributors Inc.",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  category: "Home & Kitchen",
   openGraph: {
-    title: "Kassi Distributors Inc.",
+    title: "Kassi Distributors Inc. | Premium German Kitchen Brands in the Philippines",
     type: "website",
     siteName: "Kassi Distributors Inc.",
+    locale: "en_PH",
     description:
-      "Discover how Kassi Distributors Inc. bridges global excellence with local aspirations, curating the finest international brands for Filipino homes.",
+      "Official Philippine distributor of Nolte Küchen and Express Küchen. Explore premium German kitchen designs, visit our Makati showroom, and transform your home.",
     images: [
       {
         url: "/gallery/Home/Hero_HomePage1_Desktop.webp",
         width: 1200,
         height: 630,
-        alt: "Kassi Distributors Inc. Showroom",
+        alt: "Kassi Distributors Inc. — Premium German kitchen showroom in Makati, Philippines",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Kassi Distributors Inc.",
+    title: "Kassi Distributors Inc. | Premium German Kitchen Brands in the Philippines",
     description:
-      "Discover how Kassi Distributors Inc. bridges global excellence with local aspirations, curating the finest international brands for Filipino homes.",
+      "Official Philippine distributor of Nolte Küchen and Express Küchen. Explore premium German kitchen designs, visit our Makati showroom, and transform your home.",
     images: [
       {
         url: "/gallery/Home/Hero_HomePage1_Desktop.webp",
-        alt: "Kassi Distributors Inc. Showroom",
+        alt: "Kassi Distributors Inc. — Premium German kitchen showroom in Makati, Philippines",
       },
     ],
   },
@@ -74,31 +100,44 @@ export default function RootLayout({ children }) {
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{
-              __html: JSON.stringify({
-                "@context": "https://schema.org",
-                "@type": "Organization",
-                name: "Kassi Distributors Inc.",
-                alternateName: "KDI",
-                url: "https://kassidinc.com",
-                logo: "https://kassidinc.com/logos/KDI Official Logo Files_KDI Official Logo.png",
-                description:
-                  "Kassi Distributors Inc. bridges global excellence with local aspirations, curating the finest international brands for Filipino homes.",
-                address: {
-                  "@type": "PostalAddress",
-                  streetAddress: "7646 Guijo Street, San Antonio Village",
-                  addressLocality: "Makati",
-                  addressRegion: "Metro Manila",
-                  postalCode: "1203",
-                  addressCountry: "PH",
+              __html: JSON.stringify([
+                {
+                  "@context": "https://schema.org",
+                  "@type": "Organization",
+                  name: "Kassi Distributors Inc.",
+                  alternateName: "KDI",
+                  url: "https://kassidinc.com",
+                  logo: "https://kassidinc.com/logos/KDI Official Logo Files_KDI Official Logo.png",
+                  description:
+                    "Kassi Distributors Inc. bridges global excellence with local aspirations, curating the finest international brands for Filipino homes.",
+                  address: {
+                    "@type": "PostalAddress",
+                    streetAddress: "7646 Guijo Street, San Antonio Village",
+                    addressLocality: "Makati",
+                    addressRegion: "Metro Manila",
+                    postalCode: "1203",
+                    addressCountry: "PH",
+                  },
+                  telephone: "+63 2 8807 5238",
+                  email: "info@kassidinc.com",
+                  sameAs: [
+                    "https://www.facebook.com/noltekuchenph",
+                    "https://www.instagram.com/nolteph_official/?hl=en",
+                    "https://www.linkedin.com/company/kassi-distributors-inc",
+                  ],
                 },
-                telephone: "+63 2 8807 5238",
-                email: "info@kassidinc.com",
-                sameAs: [
-                  "https://www.facebook.com/noltekuchenph",
-                  "https://www.instagram.com/nolteph_official/?hl=en",
-                  "https://www.linkedin.com/company/kassi-distributors-inc",
-                ],
-              }),
+                {
+                  "@context": "https://schema.org",
+                  "@type": "WebSite",
+                  name: "Kassi Distributors Inc.",
+                  url: "https://kassidinc.com",
+                  potentialAction: {
+                    "@type": "SearchAction",
+                    target: "https://kassidinc.com/?q={search_term_string}",
+                    "query-input": "required name=search_term_string",
+                  },
+                },
+              ]),
             }}
           />
         </head>

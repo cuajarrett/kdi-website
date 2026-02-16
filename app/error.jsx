@@ -13,7 +13,7 @@ export default function Error({ error, reset }) {
   return (
     <div className="flex flex-col items-center justify-center min-h-[40vh] px-4">
       <div className="max-w-md w-full p-6 space-y-4 text-center shadow-lg">
-        <h2>Oops! Something went wrong.</h2>
+        <h1>Oops! Something went wrong.</h1>
         <p color="gray">
           An unexpected error occurred. Please try again, or contact support if
           the issue persists.

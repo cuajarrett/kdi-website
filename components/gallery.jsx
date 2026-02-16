@@ -2,19 +2,33 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
 export default function Gallery({ gallery }) {
   const [selectedImage, setSelectedImage] = useState(null);
+
+  const closeModal = useCallback(() => {
+    setSelectedImage(null);
+  }, []);
+
+  useEffect(() => {
+    if (!selectedImage) return;
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') closeModal();
+    };
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [selectedImage, closeModal]);
 
   return (
     <>
       {/* Gallery Grid */}
       <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {gallery.map(({ src, caption }, index) => (
-          <div
+          <button
             key={index}
-            className="relative group cursor-pointer overflow-hidden"
+            type="button"
+            className="relative group cursor-pointer overflow-hidden text-left"
             onClick={() => setSelectedImage({ src, caption })}
           >
             <Image
@@ -29,24 +43,29 @@ export default function Gallery({ gallery }) {
                 Are you interested?
               </span>
             </div>
-          </div>
+          </button>
         ))}
       </div>
 
       {/* Zoom Modal */}
       {selectedImage && (
         <div
+          role="dialog"
+          aria-modal="true"
+          aria-label="Image preview"
           className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
-          onClick={() => setSelectedImage(null)}
+          onClick={closeModal}
         >
           <div
             className="relative max-w-7xl w-full px-4"
-            onClick={(e) => e.stopPropagation()} // prevent closing modal when clicking on content
+            onClick={(e) => e.stopPropagation()}
           >
             {/* Close Button */}
             <button
+              type="button"
+              aria-label="Close gallery"
               className="absolute top-4 right-8 text-white text-2xl z-10"
-              onClick={() => setSelectedImage(null)}
+              onClick={closeModal}
             >
               &times;
             </button>

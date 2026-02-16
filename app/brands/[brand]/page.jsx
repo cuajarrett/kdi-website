@@ -20,27 +20,34 @@ export async function generateMetadata({ params }) {
     return { title: "Brand Not Found" };
   }
 
+  const ogImage = brandData.gallery.length > 0
+    ? { url: brandData.gallery[0].src, width: 1200, height: 630, alt: brandData.name }
+    : { url: brandData.logo.src, alt: brandData.logo.alt };
+
   return {
-    title: `${brandData.name} - Products & Designs`,
+    title: `${brandData.name} — Products, Designs & Gallery`,
     description: brandData.metaDescription,
+    keywords: [
+      brandData.name,
+      `${brandData.name} Philippines`,
+      "German kitchen brand",
+      "kitchen designs",
+      "Kassi Distributors",
+    ],
     openGraph: {
-      title: brandData.name,
+      title: `${brandData.name} — Products, Designs & Gallery`,
       description: brandData.metaDescription,
       url: `https://kassidinc.com/brands/${brandData.slug}`,
       siteName: "Kassi Distributors Inc.",
-      images: [
-        {
-          url: brandData.logo.src,
-          alt: brandData.logo.alt,
-        },
-      ],
+      locale: "en_PH",
+      images: [ogImage],
       type: "website",
     },
     twitter: {
       card: "summary_large_image",
-      title: brandData.name,
+      title: `${brandData.name} — Products, Designs & Gallery`,
       description: brandData.metaDescription,
-      images: [brandData.logo.src],
+      images: [ogImage.url],
     },
     alternates: {
       canonical: `https://kassidinc.com/brands/${brandData.slug}`,
@@ -76,6 +83,15 @@ export default async function BrandItemPage({ params }) {
 
   const { name, logo, description, catalogue, comingSoon, gallery } = brandData;
 
+  const brandSchema = {
+    "@context": "https://schema.org",
+    "@type": "Brand",
+    name: name,
+    logo: `https://kassidinc.com${logo.src}`,
+    description: brandData.metaDescription,
+    url: `https://kassidinc.com/brands/${brandData.slug}`,
+  };
+
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -106,7 +122,7 @@ export default async function BrandItemPage({ params }) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbSchema),
+          __html: JSON.stringify([brandSchema, breadcrumbSchema]),
         }}
       />
       {/* Hero Section */}

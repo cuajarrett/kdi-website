@@ -1,28 +1,36 @@
 export const metadata = {
-  title: "Contact Us",
+  title: "Contact Us — Get a Free Kitchen Consultation",
   description:
-    "Get in touch with Kassi Distributors Inc. to discuss your kitchen and home design needs. Book a showroom visit or request a catalogue.",
+    "Contact Kassi Distributors Inc. for a free kitchen design consultation. Book a showroom visit in Makati, request a Nolte or Express Küchen catalogue, or inquire today.",
+  keywords: [
+    "contact Kassi Distributors",
+    "kitchen consultation Philippines",
+    "showroom visit Makati",
+    "Nolte Küchen inquiry",
+    "kitchen design quote",
+  ],
   openGraph: {
-    title: "Contact Us",
+    title: "Contact Kassi Distributors Inc.",
     description:
-      "Get in touch with Kassi Distributors Inc. to discuss your kitchen and home design needs. Book a showroom visit or request a catalogue.",
+      "Contact Kassi Distributors Inc. for a free kitchen design consultation. Book a showroom visit in Makati, request a Nolte or Express Küchen catalogue, or inquire today.",
     url: "https://kassidinc.com/contact",
     siteName: "Kassi Distributors Inc.",
+    locale: "en_PH",
     images: [
       {
         url: "/gallery/Home/Hero_HomePage1_Desktop.webp",
         width: 1200,
         height: 630,
-        alt: "Contact Kassi Distributors Inc.",
+        alt: "Contact Kassi Distributors Inc. for kitchen design consultations",
       },
     ],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Contact Us",
+    title: "Contact Kassi Distributors Inc.",
     description:
-      "Get in touch with Kassi Distributors Inc. to discuss your kitchen and home design needs. Book a showroom visit or request a catalogue.",
+      "Contact Kassi Distributors Inc. for a free kitchen design consultation. Book a showroom visit in Makati, request a Nolte or Express Küchen catalogue, or inquire today.",
     images: ["/gallery/Home/Hero_HomePage1_Desktop.webp"],
   },
   alternates: {

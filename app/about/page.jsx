@@ -5,30 +5,37 @@ import { ABOUT } from "@/data";
 
 export async function generateMetadata() {
   return {
-    title: "About Us",
+    title: "About Us — Our Story, Mission & Services",
     description:
-      "Discover Kassi Distributors Inc.—bridging global excellence with local aspirations. Learn about our history, mission, and commitment to design innovation.",
+      "Learn about Kassi Distributors Inc., the official Philippine distributor of Nolte Küchen and Express Küchen. Explore our history, mission, and design services.",
+    keywords: [
+      "about Kassi Distributors",
+      "kitchen distributor Philippines",
+      "Nolte Küchen dealer",
+      "home design services Makati",
+    ],
     openGraph: {
-      title: "About Us",
+      title: "About Kassi Distributors Inc.",
       description:
-        "Discover Kassi Distributors Inc.—bridging global excellence with local aspirations. Learn about our history, mission, and commitment to design innovation.",
+        "Learn about Kassi Distributors Inc., the official Philippine distributor of Nolte Küchen and Express Küchen. Explore our history, mission, and design services.",
       url: "https://kassidinc.com/about",
       siteName: "Kassi Distributors Inc.",
+      locale: "en_PH",
       images: [
         {
           url: "/gallery/About/History 3_Current.webp",
           width: 1200,
           height: 630,
-          alt: "Kassi Distributors Inc. About Us",
+          alt: "Kassi Distributors Inc. showroom and team history",
         },
       ],
       type: "website",
     },
     twitter: {
       card: "summary_large_image",
-      title: "About Us",
+      title: "About Kassi Distributors Inc.",
       description:
-        "Discover Kassi Distributors Inc.—bridging global excellence with local aspirations. Learn about our history, mission, and commitment to design innovation.",
+        "Learn about Kassi Distributors Inc., the official Philippine distributor of Nolte Küchen and Express Küchen. Explore our history, mission, and design services.",
       images: ["/gallery/About/History 3_Current.webp"],
     },
     alternates: {
@@ -119,6 +126,7 @@ export default function AboutPage() {
                     src={image}
                     alt={`${year} image`}
                     className="object-cover"
+                    loading="lazy"
                     fill
                   />
                 </div>
@@ -141,6 +149,7 @@ export default function AboutPage() {
               src={missionVisionSection.image}
               alt="Mission and Vision Statements"
               className="object-cover"
+              loading="lazy"
               fill
             />
           </div>

@@ -6,30 +6,38 @@ import Gallery from "@/components/gallery";
 
 export async function generateMetadata() {
   return {
-    title: "Our Showrooms",
+    title: "Visit Our Showrooms — Makati Kitchen Showroom",
     description:
-      "Explore Kassi Distributors Inc.'s premium showrooms. Visit our locations, view our elegant interiors, and find the perfect home solutions tailored for you.",
+      "Visit the Kassi Distributors Inc. showroom in Makati to experience Nolte Küchen and Express Küchen displays in person. Open Monday–Saturday, 9 AM – 6 PM.",
+    keywords: [
+      "kitchen showroom Makati",
+      "Nolte kitchen showroom Philippines",
+      "kitchen display Manila",
+      "visit kitchen showroom",
+      "German kitchen showroom",
+    ],
     openGraph: {
-      title: "Our Showrooms",
+      title: "Visit Our Showrooms — Makati Kitchen Showroom",
       description:
-        "Explore Kassi Distributors Inc.'s premium showrooms. Visit our locations, view our elegant interiors, and find the perfect home solutions tailored for you.",
+        "Visit the Kassi Distributors Inc. showroom in Makati to experience Nolte Küchen and Express Küchen displays in person. Open Monday–Saturday, 9 AM – 6 PM.",
       url: "https://kassidinc.com/showroom",
       siteName: "Kassi Distributors Inc.",
+      locale: "en_PH",
       images: [
         {
           url: "/gallery/Showroom/image1.webp",
           width: 1200,
           height: 630,
-          alt: "Kassi Distributors Inc. Showroom",
+          alt: "Kassi Distributors Inc. kitchen showroom in Makati, Philippines",
         },
       ],
       type: "website",
     },
     twitter: {
       card: "summary_large_image",
-      title: "Our Showrooms",
+      title: "Visit Our Showrooms — Makati Kitchen Showroom",
       description:
-        "Explore Kassi Distributors Inc.'s premium showrooms. Visit our locations, view our elegant interiors, and find the perfect home solutions tailored for you.",
+        "Visit the Kassi Distributors Inc. showroom in Makati to experience Nolte Küchen and Express Küchen displays in person. Open Monday–Saturday, 9 AM – 6 PM.",
       images: ["/gallery/Showroom/image1.webp"],
     },
     alternates: {
@@ -101,13 +109,13 @@ export default function ShowroomPage() {
                 <p>{address}</p>
                 <p>{openingHours}</p>
                 <p>
-                  {phones.map((phone, index) => (
-                    <>
-                      <Link key={index} isExternal href={`tel:${phone}`}>
+                  {phones.map((phone, phoneIndex) => (
+                    <span key={phoneIndex}>
+                      <Link isExternal href={`tel:${phone}`}>
                         {phone}
                       </Link>
-                      {index < phones.length - 1 && " / "}
-                    </>
+                      {phoneIndex < phones.length - 1 && " / "}
+                    </span>
                   ))}
                 </p>
                 <Link href={googleMaps} color="primary" isExternal>

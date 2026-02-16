@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Link } from "@nextui-org/link";
 
-export const Card = ({ link, image, title, excerpt, contain = false }) => {
+export const Card = ({ link, image, title, excerpt, contain = false, headingLevel: Heading = "h2" }) => {
   return (
     <Link
       href={link}
@@ -16,7 +16,7 @@ export const Card = ({ link, image, title, excerpt, contain = false }) => {
         />
       </div>
       <div className="p-4">
-        <h2 className="text-xl font-bold line-clamp-2">{title}</h2>
+        <Heading className="text-xl font-bold line-clamp-2">{title}</Heading>
         <p className="text-gray-700 mt-2 line-clamp-3 text-justify text-xs sm:text-md">
           {excerpt}
         </p>

@@ -44,11 +44,11 @@ export default function PageLayout({ children }) {
               />
               <div className="absolute inset-0 bg-black/30 flex items-center justify-center text-center text-white">
                 <div className="container mx-16 lg:mx-auto max-w-4xl space-y-4">
-                  <div>
+                  {index === 0 && (
                     <h1 className="py-8 text-white font-myanmar text-5xl lg:text-[4rem] font-bold">
                       {aboutSection.title}
                     </h1>
-                  </div>
+                  )}
                   <div className="space-y-2 text-md lg:text-xl">
                     {aboutSection.description}
                   </div>

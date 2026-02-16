@@ -3,30 +3,39 @@ import { title } from "@/components/primitives";
 import { BRANDS } from "@/data";
 
 export const metadata = {
-  title: "Our Brands",
+  title: "Our Brands — Nolte Küchen, Express Küchen & More",
   description:
-    "Explore the international home brands curated by Kassi Distributors Inc. for Filipino homes, including Nolte Küchen and Express Küchen kitchen solutions.",
+    "Discover the premium German kitchen brands available through Kassi Distributors Inc. — Nolte Küchen, Express Küchen, and Nolte NEO. Made in Germany, available in the Philippines.",
+  keywords: [
+    "Nolte Küchen",
+    "Express Küchen",
+    "Nolte NEO",
+    "German kitchen brands",
+    "kitchen brands Philippines",
+    "Made in Germany kitchen",
+  ],
   openGraph: {
-    title: "Our Brands",
+    title: "Our Brands — Nolte Küchen, Express Küchen & More",
     description:
-      "Explore the international home brands curated by Kassi Distributors Inc. for Filipino homes, including Nolte Küchen and Express Küchen kitchen solutions.",
+      "Discover the premium German kitchen brands available through Kassi Distributors Inc. — Nolte Küchen, Express Küchen, and Nolte NEO. Made in Germany, available in the Philippines.",
     url: "https://kassidinc.com/brands",
     siteName: "Kassi Distributors Inc.",
+    locale: "en_PH",
     images: [
       {
         url: "/gallery/Home/Hero_HomePage1_Desktop.webp",
         width: 1200,
         height: 630,
-        alt: "Kassi Distributors Inc. Brands",
+        alt: "Premium German kitchen brands by Kassi Distributors Inc.",
       },
     ],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Our Brands",
+    title: "Our Brands — Nolte Küchen, Express Küchen & More",
     description:
-      "Explore the international home brands curated by Kassi Distributors Inc. for Filipino homes, including Nolte Küchen and Express Küchen kitchen solutions.",
+      "Discover the premium German kitchen brands available through Kassi Distributors Inc. — Nolte Küchen, Express Küchen, and Nolte NEO. Made in Germany, available in the Philippines.",
     images: ["/gallery/Home/Hero_HomePage1_Desktop.webp"],
   },
   alternates: {
