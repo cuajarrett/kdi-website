@@ -29,18 +29,18 @@ export default function PageLayout({ children }) {
               <Image
                 src={image.desktopSrc}
                 alt={image.alt}
-                loading="eager"
+                loading={index === 0 ? "eager" : "lazy"}
                 className="object-cover object-center hidden w-screen h-[80vh] md:block"
-                height={1920}
-                width={1080}
+                width={1920}
+                height={1080}
               />
               <Image
                 src={image.mobileSrc}
                 alt={image.alt}
-                loading="eager"
+                loading={index === 0 ? "eager" : "lazy"}
                 className="object-cover object-center w-screen h-[80vh] md:hidden"
-                height={1080}
-                width={1920}
+                width={1080}
+                height={1920}
               />
               <div className="absolute inset-0 bg-black/30 flex items-center justify-center text-center text-white">
                 <div className="container mx-16 lg:mx-auto max-w-4xl space-y-4">

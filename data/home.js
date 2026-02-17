@@ -27,32 +27,32 @@ export const HOME = {
     ),
     images: [
       {
-        desktopSrc: "/gallery/Home/Hero_HomePage1_Desktop.jpg",
+        desktopSrc: "/gallery/Home/Hero_HomePage1_Desktop.webp",
         mobileSrc: "/gallery/Home/Hero_HomePage1_Mobile.webp",
         alt: "Kassi Distributors Inc. Gallery 1",
       },
       {
-        desktopSrc: "/gallery/Home/Hero_HomePage2_Desktop.jpg",
+        desktopSrc: "/gallery/Home/Hero_HomePage2_Desktop.webp",
         mobileSrc: "/gallery/Home/Hero_HomePage2_Mobile.webp",
         alt: "Kassi Distributors Inc. Gallery 2",
       },
       {
-        desktopSrc: "/gallery/Home/Hero_HomePage3_Desktop.jpg",
+        desktopSrc: "/gallery/Home/Hero_HomePage3_Desktop.webp",
         mobileSrc: "/gallery/Home/Hero_HomePage3_Mobile.webp",
         alt: "Kassi Distributors Inc. Gallery 3",
       },
       {
-        desktopSrc: "/gallery/Home/Hero_HomePage4_Desktop.jpg",
+        desktopSrc: "/gallery/Home/Hero_HomePage4_Desktop.webp",
         mobileSrc: "/gallery/Home/Hero_HomePage4_Mobile.webp",
         alt: "Kassi Distributors Inc. Gallery 4",
       },
       {
-        desktopSrc: "/gallery/Home/Hero_HomePage5_Desktop.jpg",
+        desktopSrc: "/gallery/Home/Hero_HomePage5_Desktop.webp",
         mobileSrc: "/gallery/Home/Hero_HomePage5_Mobile.webp",
         alt: "Kassi Distributors Inc. Gallery 5",
       },
       {
-        desktopSrc: "/gallery/Home/Hero_HomePage6_Desktop.jpg",
+        desktopSrc: "/gallery/Home/Hero_HomePage6_Desktop.webp",
         mobileSrc: "/gallery/Home/Hero_HomePage6_Mobile.webp",
         alt: "Kassi Distributors Inc. Gallery 6",
       },

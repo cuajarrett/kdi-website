@@ -38,18 +38,18 @@ export default function HomePage() {
               <Image
                 src={image.desktopSrc}
                 alt={image.alt}
-                loading="eager"
+                loading={index === 0 ? "eager" : "lazy"}
                 className="object-cover object-center hidden w-screen h-[50vh] lg:h-[80vh] md:block"
-                height={1920}
-                width={1080}
+                width={1920}
+                height={1080}
               />
               <Image
                 src={image.mobileSrc}
                 alt={image.alt}
-                loading="eager"
+                loading={index === 0 ? "eager" : "lazy"}
                 className="object-cover object-center w-screen h-[50vh] lg:h-[80vh] md:hidden"
-                height={1080}
-                width={1920}
+                width={1080}
+                height={1920}
               />
             </SwiperSlide>
           ))}
